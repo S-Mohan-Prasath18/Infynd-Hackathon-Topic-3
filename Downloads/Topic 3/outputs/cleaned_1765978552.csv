@@ -1,0 +1,3 @@
+company_name,person_name,email,job_title,industry,phone,website,country,size,issues,has_issues,suggested_email,suggested_country,email_confidence,country_confidence,corrections_applied,suggested_industry,suggested_phone,ai_suggestions,is_duplicate,duplicate_group,role_function,role_confidence
+TechFlow,John Doe,john.doe@techflo.io,Manager,,1234567890.0,,,,missing_industry;missing_company_size;missing_country,True,john.doe@techflo.io,,0.0,0.0,Phone Formatting; AI: Inferred Industry; AI: Standardized Title; AI: Formatted Phone,Technology,+1-123-456-7890,,False,,Other,0.0
+Acme,,invalid.email,CEO,,,,,,missing_person_name;missing_phone;missing_industry;missing_company_size;invalid_email_format;missing_country,True,invalid.email,,0.0,0.0,,,,,False,,Other,0.0

@@ -1,0 +1,62 @@
+Company_Name,Website,Country,Industry,Company_Size,Annual_Revenue_USD,Primary_Domain,Founded_Year,Headquarters_City
+Acme Corporation,www.acmecorp.com,United States,Software Development,500-1000,75000000,Cloud Computing,2010,New York
+TechFlow Solutions,www.techflow.com,Canada,IT Services,100-250,18000000,Software Consulting,2015,Toronto
+CloudFirst Industries,www.cloudfirst.co.uk,United Kingdom,Cloud Services,250-500,45000000,Infrastructure,2012,London
+DataViz Analytics,www.dataviz.de,Germany,Data Analytics,50-100,8500000,Business Intelligence,2018,Berlin
+SecureLink Security,www.securelink.fr,France,Cybersecurity,75-150,12000000,Network Security,2017,Paris
+InnovatePro Tech,www.innovatepro.in,India,AI & Machine Learning,200-500,22000000,Artificial Intelligence,2019,Bangalore
+GreenWave Energy,www.greenwave.au,Australia,Renewable Energy,100-250,16000000,Solar Solutions,2014,Sydney
+QuantumDrive Systems,www.quantumdrive.se,Sweden,Quantum Computing,30-75,5500000,Advanced Computing,2020,Stockholm
+BlockChain Dynamics,www.blockchaindyn.ch,Switzerland,Blockchain,80-150,14000000,Cryptocurrency,2016,Zurich
+VentureLabs Japan,www.venturelabs.jp,Japan,IoT & Hardware,300-750,88000000,Internet of Things,2013,Tokyo
+People_Name,Title,Email,Phone,Role_Function,Company_Name,Department,Location
+James Anderson,Chief Executive Officer,james.anderson@acmecorp.com,+1-212-555-0101,Executive Leadership,Acme Corporation,C-Suite,New York
+Lisa Johnson,VP of Engineering,lisa.johnson@acmecorp.com,+1-212-555-0102,Technical Leadership,Acme Corporation,Engineering,New York
+Robert Smith,Senior Software Engineer,robert.smith@acmecorp.com,+1-212-555-0103,Software Development,Acme Corporation,Engineering,New York
+Maria Garcia,Product Manager,maria.garcia@acmecorp.com,+1-212-555-0104,Product Management,Acme Corporation,Product,New York
+David Kim,Cloud Architect,david.kim@acmecorp.com,+1-212-555-0105,Technical Architecture,Acme Corporation,Engineering,New York
+Patricia Lee,Chief Financial Officer,patricia.lee@techflow.com,+1-416-555-0201,Executive Leadership,TechFlow Solutions,Finance,Toronto
+Michael Chen,Solutions Architect,michael.chen@techflow.com,+1-416-555-0202,Technical Consulting,TechFlow Solutions,Consulting,Toronto
+Jennifer White,Project Manager,jennifer.white@techflow.com,+1-416-555-0203,Project Management,TechFlow Solutions,Operations,Toronto
+Christopher Brown,DevOps Engineer,christopher.brown@techflow.com,+1-416-555-0204,Infrastructure,TechFlow Solutions,Engineering,Toronto
+Amanda Davis,Sales Manager,amanda.davis@techflow.com,+1-416-555-0205,Sales,TechFlow Solutions,Sales,Toronto
+Oliver Wilson,Managing Director,oliver.wilson@cloudfirst.co.uk,+44-20-7946-1101,Executive Leadership,CloudFirst Industries,Management,London
+Sarah Thompson,Infrastructure Manager,sarah.thompson@cloudfirst.co.uk,+44-20-7946-1102,Infrastructure,CloudFirst Industries,Operations,London
+Emma Martinez,Cloud Solutions Engineer,emma.martinez@cloudfirst.co.uk,+44-20-7946-1103,Engineering,CloudFirst Industries,Engineering,London
+James Taylor,Technical Support Lead,james.taylor@cloudfirst.co.uk,+44-20-7946-1104,Customer Support,CloudFirst Industries,Support,London
+Sophie Robinson,Business Analyst,sophie.robinson@cloudfirst.co.uk,+44-20-7946-1105,Analysis,CloudFirst Industries,Business,London
+Klaus Mueller,Chief Technology Officer,klaus.mueller@dataviz.de,+49-30-555-1201,Executive Leadership,DataViz Analytics,Technology,Berlin
+Hannah Schmidt,Senior Data Analyst,hannah.schmidt@dataviz.de,+49-30-555-1202,Data Analysis,DataViz Analytics,Analytics,Berlin
+Stefan Weber,BI Developer,stefan.weber@dataviz.de,+49-30-555-1203,Development,DataViz Analytics,Engineering,Berlin
+Brigitte Fischer,Analytics Consultant,brigitte.fischer@dataviz.de,+49-30-555-1204,Consulting,DataViz Analytics,Consulting,Berlin
+Thomas Beck,Account Executive,thomas.beck@dataviz.de,+49-30-555-1205,Sales,DataViz Analytics,Sales,Berlin
+Francoise Dubois,Director of Security,francoise.dubois@securelink.fr,+33-1-4555-1301,Executive Leadership,SecureLink Security,Security,Paris
+Laurent Martin,Security Engineer,laurent.martin@securelink.fr,+33-1-4555-1302,Security Engineering,SecureLink Security,Engineering,Paris
+Isabelle Lefevre,Penetration Tester,isabelle.lefevre@securelink.fr,+33-1-4555-1303,Security Testing,SecureLink Security,Security,Paris
+Michel Bernard,Network Administrator,michel.bernard@securelink.fr,+33-1-4555-1304,Network Management,SecureLink Security,Operations,Paris
+Anne Rousseau,Compliance Officer,anne.rousseau@securelink.fr,+33-1-4555-1305,Compliance,SecureLink Security,Compliance,Paris
+Rajesh Kumar,Chief Executive Officer,rajesh.kumar@innovatepro.in,+91-80-555-1401,Executive Leadership,InnovatePro Tech,Management,Bangalore
+Priya Singh,Machine Learning Engineer,priya.singh@innovatepro.in,+91-80-555-1402,AI/ML Development,InnovatePro Tech,Research,Bangalore
+Amit Patel,Data Scientist,amit.patel@innovatepro.in,+91-80-555-1403,Data Science,InnovatePro Tech,Research,Bangalore
+Neha Sharma,AI Researcher,neha.sharma@innovatepro.in,+91-80-555-1404,Research,InnovatePro Tech,Research,Bangalore
+Arjun Desai,Product Lead,arjun.desai@innovatepro.in,+91-80-555-1405,Product Management,InnovatePro Tech,Product,Bangalore
+Gregory Thompson,Founder & CEO,gregory.thompson@greenwave.au,+61-2-555-1501,Executive Leadership,GreenWave Energy,Management,Sydney
+Michelle Harris,Solar Engineer,michelle.harris@greenwave.au,+61-2-555-1502,Engineering,GreenWave Energy,Engineering,Sydney
+Andrew Jackson,Operations Manager,andrew.jackson@greenwave.au,+61-2-555-1503,Operations,GreenWave Energy,Operations,Sydney
+Victoria King,Environmental Specialist,victoria.king@greenwave.au,+61-2-555-1504,Environmental,GreenWave Energy,Consulting,Sydney
+William Green,Business Development Manager,william.green@greenwave.au,+61-2-555-1505,Business Development,GreenWave Energy,Sales,Sydney
+Ingrid Bergstrom,Chief Science Officer,ingrid.bergstrom@quantumdrive.se,+46-8-555-1601,Executive Leadership,QuantumDrive Systems,Research,Stockholm
+Erik Svensson,Quantum Researcher,erik.svensson@quantumdrive.se,+46-8-555-1602,Research,QuantumDrive Systems,Research,Stockholm
+Karin Lindberg,Hardware Engineer,karin.lindberg@quantumdrive.se,+46-8-555-1603,Engineering,QuantumDrive Systems,Engineering,Stockholm
+Anders Nilsson,Software Developer,anders.nilsson@quantumdrive.se,+46-8-555-1604,Development,QuantumDrive Systems,Engineering,Stockholm
+Sofia Eklund,Project Coordinator,sofia.eklund@quantumdrive.se,+46-8-555-1605,Administration,QuantumDrive Systems,Administration,Stockholm
+Elena Rossi,Chief Executive Officer,elena.rossi@blockchaindyn.ch,+41-44-555-1701,Executive Leadership,BlockChain Dynamics,Management,Zurich
+Marco Bianchi,Blockchain Developer,marco.bianchi@blockchaindyn.ch,+41-44-555-1702,Development,BlockChain Dynamics,Engineering,Zurich
+Sophia Romano,Smart Contract Engineer,sophia.romano@blockchaindyn.ch,+41-44-555-1703,Development,BlockChain Dynamics,Engineering,Zurich
+Giovanni Russo,Security Auditor,giovanni.russo@blockchaindyn.ch,+41-44-555-1704,Security,BlockChain Dynamics,Security,Zurich
+Giulia Ferrari,Compliance Manager,giulia.ferrari@blockchaindyn.ch,+41-44-555-1705,Compliance,BlockChain Dynamics,Compliance,Zurich
+Hiroshi Tanaka,President,hiroshi.tanaka@venturelabs.jp,+81-3-5555-1801,Executive Leadership,VentureLabs Japan,Management,Tokyo
+Yuki Yamamoto,VP of Hardware Development,yuki.yamamoto@venturelabs.jp,+81-3-5555-1802,Technical Leadership,VentureLabs Japan,Engineering,Tokyo
+Sakura Nakamura,IoT Solutions Engineer,sakura.nakamura@venturelabs.jp,+81-3-5555-1803,Engineering,VentureLabs Japan,Engineering,Tokyo
+Kenji Suzuki,Firmware Engineer,kenji.suzuki@venturelabs.jp,+81-3-5555-1804,Engineering,VentureLabs Japan,Engineering,Tokyo
+Tomoe Watanabe,Customer Success Manager,tomoe.watanabe@venturelabs.jp,+81-3-5555-1805,Customer Success,VentureLabs Japan,Sales,Tokyo

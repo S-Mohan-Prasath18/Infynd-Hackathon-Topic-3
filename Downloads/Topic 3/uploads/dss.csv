@@ -1,0 +1,51 @@
+Company_Name,Website,Country,Industry,Company_Size,Annual_Revenue_USD,Primary_Domain,Founded_Year,Headquarters_City,,People_Name,Title,Email,Phone,Role_Function,Company_Name,Department,Location
+TechVenture Solutions,www.techventure.com,United States,Software Development,250-500,45000000,Cloud Computing & AI,2015,San Francisco,,John Mitchell,Chief Executive Officer,john.mitchell@techventure.com,-1070,Executive Leadership,TechVenture Solutions,C-Suite,San Francisco
+GlobalFinance Corp,www.globalfinance.co.uk,United Kingdom,Financial Services,1000+,850000000,Investment Banking,1998,London,,Sarah Chen,Senior Cloud Architect,sarah.chen@techventure.com,-1071,Technical Architecture,TechVenture Solutions,Engineering,San Francisco
+EcoEnergy Systems,www.ecoenergy.de,Germany,Renewable Energy,100-250,12000000,Solar & Wind Solutions,2010,Berlin,,Michael Rodriguez,Product Manager - Cloud Solutions,michael.r@techventure.com,-1072,Product Management,TechVenture Solutions,Product,San Francisco
+SecureNet Industries,www.securenet.ca,Canada,Cybersecurity,50-100,8500000,Network Security,2018,Toronto,,Emily Watson,Lead Software Engineer,emily.watson@techventure.com,-1073,Software Development,TechVenture Solutions,Engineering,San Francisco
+InnovateLabs Inc,www.innovatelabs.sg,Singapore,Artificial Intelligence,75-150,22000000,Machine Learning,2017,Singapore,,David Park,DevOps Engineer,david.park@techventure.com,-1074,Infrastructure,TechVenture Solutions,Engineering,San Francisco
+GreenBuild Construction,www.greenbuild.au,Australia,Construction,500-1000,125000000,Sustainable Architecture,2008,Sydney,,James Thompson,Chief Financial Officer,james.thompson@globalfinance.co.uk,-8880,Executive Leadership,GlobalFinance Corp,Finance,London
+DataDrive Analytics,www.datadrive.in,India,Business Intelligence,200-500,15000000,Data Analytics,2019,Bangalore,,Victoria Bradford,Senior Investment Analyst,victoria.b@globalfinance.co.uk,-8881,Financial Analysis,GlobalFinance Corp,Investment,London
+QuantumTech Research,www.quantumtech.se,Sweden,Quantum Computing,30-50,5000000,Quantum Technologies,2021,Stockholm,,Robert Sterling,Head of Risk Management,robert.s@globalfinance.co.uk,-8882,Risk Assessment,GlobalFinance Corp,Risk,London
+CloudScale Enterprises,www.cloudscale.jp,Japan,Cloud Infrastructure,300-750,95000000,Infrastructure as a Service,2012,Tokyo,,Sophia Patel,Trading Specialist,sophia.patel@globalfinance.co.uk,-8883,Trading Operations,GlobalFinance Corp,Trading,London
+BlockchainVault Ltd,www.blockchainavault.ch,Switzerland,Blockchain,100-200,18000000,Cryptocurrency & DeFi,2016,Zurich,,Oliver James,Client Relations Manager,oliver.james@globalfinance.co.uk,-8884,Client Management,GlobalFinance Corp,Sales,London
+,,,,,,,,,,Klaus Mueller,Managing Director,klaus.mueller@ecoenergy.de,-637,Executive Leadership,EcoEnergy Systems,Management,Berlin
+,,,,,,,,,,Heike Schmidt,Solar Systems Engineer,heike.schmidt@ecoenergy.de,-638,Engineering,EcoEnergy Systems,Engineering,Berlin
+,,,,,,,,,,Stefan Weber,Project Manager,stefan.weber@ecoenergy.de,-639,Project Management,EcoEnergy Systems,Operations,Berlin
+,,,,,,,,,,Anna Fischer,Environmental Consultant,anna.fischer@ecoenergy.de,-640,Consulting,EcoEnergy Systems,Consulting,Berlin
+,,,,,,,,,,Thomas Hoffmann,Business Development Manager,thomas.h@ecoenergy.de,-641,Sales & Marketing,EcoEnergy Systems,Business Development,Berlin
+,,,,,,,,,,Alexandra Morris,Chief Information Security Officer,alexandra.morris@securenet.ca,-1071,Executive Leadership,SecureNet Industries,Security,Toronto
+,,,,,,,,,,Marcus Campbell,Security Operations Center Manager,marcus.c@securenet.ca,-1072,Security Operations,SecureNet Industries,Security,Toronto
+,,,,,,,,,,Jennifer Wong,Penetration Testing Specialist,jennifer.wong@securenet.ca,-1073,Security Testing,SecureNet Industries,Security,Toronto
+,,,,,,,,,,Daniel Kim,Network Security Engineer,daniel.kim@securenet.ca,-1074,Engineering,SecureNet Industries,Engineering,Toronto
+,,,,,,,,,,Lisa Anderson,Security Compliance Officer,lisa.anderson@securenet.ca,-1075,Compliance,SecureNet Industries,Compliance,Toronto
+,,,,,,,,,,Priya Sharma,Chief Technology Officer,priya.sharma@innovatelabs.sg,-6591,Executive Leadership,InnovateLabs Inc,Technology,Singapore
+,,,,,,,,,,Rajesh Kumar,Machine Learning Engineer,rajesh.kumar@innovatelabs.sg,-6592,AI/ML Development,InnovateLabs Inc,Research,Singapore
+,,,,,,,,,,Mei Lin,Data Scientist,mei.lin@innovatelabs.sg,-6593,Data Science,InnovateLabs Inc,Research,Singapore
+,,,,,,,,,,Arun Desai,Natural Language Processing Specialist,arun.desai@innovatelabs.sg,-6594,AI Research,InnovateLabs Inc,Research,Singapore
+,,,,,,,,,,Natasha Volkov,AI Ethics Officer,natasha.v@innovatelabs.sg,-6595,Governance,InnovateLabs Inc,Governance,Singapore
+,,,,,,,,,,Patrick O'Brien,Chief Executive Officer,patrick.obrien@greenbuild.au,-597,Executive Leadership,GreenBuild Construction,Management,Sydney
+,,,,,,,,,,Rebecca Martinez,Director of Sustainable Design,rebecca.m@greenbuild.au,-598,Design,GreenBuild Construction,Design,Sydney
+,,,,,,,,,,Nicholas Thompson,Construction Project Manager,nicholas.t@greenbuild.au,-599,Project Management,GreenBuild Construction,Operations,Sydney
+,,,,,,,,,,Angela Wright,Environmental Compliance Manager,angela.wright@greenbuild.au,-600,Compliance,GreenBuild Construction,Compliance,Sydney
+,,,,,,,,,,Christopher Bell,Head of Engineering,christopher.bell@greenbuild.au,-601,Engineering,GreenBuild Construction,Engineering,Sydney
+,,,,,,,,,,Vikram Singh,Founder & Chief Executive Officer,vikram.singh@datadrive.in,-645,Executive Leadership,DataDrive Analytics,Management,Bangalore
+,,,,,,,,,,Anjali Gupta,Senior Data Analyst,anjali.gupta@datadrive.in,-646,Data Analysis,DataDrive Analytics,Analytics,Bangalore
+,,,,,,,,,,Ravi Kumar,Business Intelligence Developer,ravi.kumar@datadrive.in,-647,BI Development,DataDrive Analytics,Engineering,Bangalore
+,,,,,,,,,,Deepika Nair,Analytics Solutions Architect,deepika.nair@datadrive.in,-648,Architecture,DataDrive Analytics,Engineering,Bangalore
+,,,,,,,,,,Suresh Patel,Sales Executive,suresh.patel@datadrive.in,-649,Sales,DataDrive Analytics,Sales,Bangalore
+,,,,,,,,,,Ingrid Bergström,Chief Science Officer,ingrid.bergstrom@quantumtech.se,-618,Executive Leadership,QuantumTech Research,Research,Stockholm
+,,,,,,,,,,Per Lindström,Quantum Algorithm Researcher,per.lindstrom@quantumtech.se,-619,Research,QuantumTech Research,Research,Stockholm
+,,,,,,,,,,Elin Johansson,Quantum Hardware Engineer,elin.johansson@quantumtech.se,-620,Engineering,QuantumTech Research,Engineering,Stockholm
+,,,,,,,,,,Fredrik Ström,Software Developer - Quantum,fredrik.strom@quantumtech.se,-621,Software Development,QuantumTech Research,Engineering,Stockholm
+,,,,,,,,,,Matilda Larsson,Research Administrator,matilda.larsson@quantumtech.se,-622,Administration,QuantumTech Research,Administration,Stockholm
+,,,,,,,,,,Yuki Tanaka,President,yuki.tanaka@cloudscale.jp,-5578,Executive Leadership,CloudScale Enterprises,Management,Tokyo
+,,,,,,,,,,Kenji Yamamoto,VP of Cloud Infrastructure,kenji.yamamoto@cloudscale.jp,-5579,Technical Leadership,CloudScale Enterprises,Engineering,Tokyo
+,,,,,,,,,,Sakura Nakamura,Cloud Solutions Architect,sakura.nakamura@cloudscale.jp,-5580,Architecture,CloudScale Enterprises,Engineering,Tokyo
+,,,,,,,,,,Hiroshi Suzuki,Infrastructure Engineer,hiroshi.suzuki@cloudscale.jp,-5581,Engineering,CloudScale Enterprises,Engineering,Tokyo
+,,,,,,,,,,Tomoe Watanabe,Customer Success Manager,tomoe.watanabe@cloudscale.jp,-5582,Customer Success,CloudScale Enterprises,Sales,Tokyo
+,,,,,,,,,,Elena Rossi,Chief Executive Officer,elena.rossi@blockchainavault.ch,-659,Executive Leadership,BlockchainVault Ltd,Management,Zurich
+,,,,,,,,,,Marco Bianchi,Blockchain Developer,marco.bianchi@blockchainavault.ch,-660,Software Development,BlockchainVault Ltd,Engineering,Zurich
+,,,,,,,,,,Sophia Romano,Smart Contract Auditor,sophia.romano@blockchainavault.ch,-661,Security,BlockchainVault Ltd,Security,Zurich
+,,,,,,,,,,Antonio Colombo,DeFi Protocol Specialist,antonio.colombo@blockchainavault.ch,-662,Development,BlockchainVault Ltd,Engineering,Zurich
+,,,,,,,,,,Giulia Ferrari,Regulatory Affairs Manager,giulia.ferrari@blockchainavault.ch,-663,Compliance,BlockchainVault Ltd,Compliance,Zurich

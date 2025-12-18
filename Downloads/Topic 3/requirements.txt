@@ -1,0 +1,6 @@
+flask==2.3.0
+flask-cors==4.0.0
+pandas
+numpy
+rapidfuzz
+requests>=2.0.0

@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data QA Copilot | Enterprise Edition</title>
+    <!-- Fonts: Inter (Clean Sans for UI) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load Chart.js for visualization if needed, or keeping it lightweight -->
+
+    <style>
+        /* --- IGLOO THEME (Glassmorphism / SaaS) --- */
+        :root {
+            --bg-body: #f3f6fc;
+            /* Very light blue-grey */
+            --bg-glass: rgba(255, 255, 255, 0.75);
+            --bg-card: #ffffff;
+
+            --primary: #2563eb;
+            /* Corporate Blue */
+            --secondary: #475569;
+            /* Slate Grey */
+            --accent: #0ea5e9;
+            /* Sky Blue */
+
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --info: #3b82f6;
+
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-glow: 0 0 20px rgba(37, 99, 235, 0.15);
+
+            --radius-lg: 16px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-image:
+                radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(14, 165, 233, 0.05) 0px, transparent 50%);
+        }
+
+        /* --- LAYOUTS --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- CARDS & GLASS --- */
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card-glass {
+            background: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* --- BUTTONS --- */
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--text-main);
+            border: 1px solid #e2e8f0;
+        }
+
+        .btn-secondary:hover {
+            background: #f8fafc;
+            border-color: #cbd5e1;
+        }
+
+        .btn-accent {
+            background: #8b5cf6;
+            color: white;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+        }
+
+        .btn-accent:hover {
+            background: #7c3aed;
+            transform: translateY(-1px);
+        }
+
+        .btn-success {
+            background: #10b981;
+            color: white;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-success:hover {
+            background: #059669;
+            transform: translateY(-1px);
+        }
+
+        .btn-warning {
+            background: #f59e0b;
+            color: white;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-warning:hover {
+            background: #d97706;
+            transform: translateY(-1px);
+        }
+
+        /* --- PAGE 1: UPLOAD (HERO) --- */
+        .hero-section {
+            text-align: center;
+            padding: 4rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-sub);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .upload-box {
+            background: white;
+            border: 2px dashed #e2e8f0;
+            border-radius: var(--radius-lg);
+            padding: 4rem 2rem;
+            cursor: pointer;
+            transition: 0.2s;
+            position: relative;
+        }
+
+        .upload-box:hover {
+            border-color: var(--primary);
+            background: #f8fafc;
+        }
+
+        .upload-icon {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        /* --- PAGE 2: DASHBOARD --- */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .stat-val {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-sub);
+            font-weight: 600;
+        }
+
+        .stat-card.blue .stat-val {
+            color: var(--primary);
+        }
+
+        .stat-card.green .stat-val {
+            color: var(--success);
+        }
+
+        .stat-card.red .stat-val {
+            color: var(--danger);
+        }
+
+        .stat-card.purple .stat-val {
+            color: #8b5cf6;
+            /* neon-purple fallback */
+        }
+
+        .stat-card.orange .stat-val {
+            color: var(--warning);
+        }
+
+        /* --- PAGE 3: DATA TABLE --- */
+        .table-container {
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+
+        .toolbar {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8fafc;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background: #f1f5f9;
+            text-align: left;
+            padding: 1rem;
+            font-weight: 600;
+            color: var(--text-sub);
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #f1f5f9;
+            color: var(--text-main);
+        }
+
+        tr:hover td {
+            background: #f8fafc;
+        }
+
+        /* Status Badges */
+        .badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .badge-ai {
+            background: #e0e7ff;
+            color: #4338ca;
+        }
+
+        /* Indigo */
+        .badge-ok {
+            background: #dcfce7;
+            color: #15803d;
+        }
+
+        /* Green */
+        .badge-err {
+            background: #fee2e2;
+            color: #b91c1c;
+        }
+
+        /* Red */
+
+        /* Loading */
+        .loader-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            flex-direction: column;
+        }
+
+        .spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid #e2e8f0;
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s infinite linear;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .progress-container {
+            text-align: center;
+            max-width: 500px;
+        }
+
+        .progress-bar-wrapper {
+            width: 100%;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 99px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 99px;
+        }
+
+        .steps-list {
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .step-item {
+            padding: 0.5rem 0;
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .step-item.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .step-item.complete {
+            color: var(--success);
+        }
+
+        .step-icon {
+            font-size: 1.2rem;
+        }
+
+        /* --- CHATBOT WIDGET --- */
+        .chat-widget {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 1rem;
+        }
+
+        .chat-bubble {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .chat-bubble:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .chat-window {
+            width: 380px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        .chat-window.open {
+            display: flex;
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .chat-header {
+            padding: 1.25rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-header h4 {
+            margin: 0;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background: #f8fafc;
+        }
+
+        .msg {
+            max-width: 80%;
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
+            line-height: 1.4;
+            position: relative;
+        }
+
+        .msg-ai {
+            align-self: flex-start;
+            background: white;
+            color: var(--text-main);
+            border: 1px solid #e2e8f0;
+            border-bottom-left-radius: 2px;
+        }
+
+        .msg-user {
+            align-self: flex-end;
+            background: var(--primary);
+            color: white;
+            border-bottom-right-radius: 2px;
+        }
+
+        .chat-input-area {
+            padding: 1rem;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .chat-input {
+            flex: 1;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-md);
+            padding: 0.6rem 1rem;
+            outline: none;
+            font-size: 0.9rem;
+        }
+
+        .chat-input:focus {
+            border-color: var(--primary);
+        }
+
+        .msg-typing {
+            font-style: italic;
+            color: var(--text-sub);
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- AUDIT LOG & CHIPS --- */
+        .audit-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            background: white;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+        }
+
+        .audit-table th {
+            text-align: left;
+            padding: 0.6rem;
+            background: #f1f5f9;
+            color: var(--text-sub);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .audit-table td {
+            padding: 0.6rem;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .change-old {
+            color: var(--danger);
+            text-decoration: line-through;
+            background: #fef2f2;
+            padding: 1px 4px;
+            border-radius: 2px;
+        }
+
+        .change-new {
+            color: var(--success);
+            font-weight: 600;
+            background: #f0fdf4;
+            padding: 1px 4px;
+            border-radius: 2px;
+        }
+
+        .chat-chips {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            padding: 0.5rem 1rem;
+            background: #f8fafc;
+        }
+
+        /* --- DEDUPE REPORT --- */
+        .dedupe-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .dedupe-stat {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .dedupe-stat label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-sub);
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+        }
+
+        .dedupe-stat span {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .dedupe-group {
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary);
+            background: white;
+            padding: 1rem;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #e2e8f0;
+            border-left-width: 4px;
+        }
+
+        .dedupe-group h5 {
+            margin: 0 0 0.5rem 0;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dedupe-group .row-list {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+            background: #f1f5f9;
+            padding: 0.4rem 0.8rem;
+            border-radius: var(--radius-sm);
+        }
+
+        .score-badge {
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            background: #dcfce7;
+            color: #166534;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        /* --- COLUMN HEALTH --- */
+        .health-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .health-card {
+            background: white;
+            padding: 1.25rem;
+            border-radius: var(--radius-md);
+            border: 1px solid #e2e8f0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .health-card h5 {
+            margin: 0 0 0.75rem 0;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-sub);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .health-bar-bg {
+            height: 8px;
+            background: #f1f5f9;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 0.75rem;
+        }
+
+        .health-bar-fill {
+            height: 100%;
+            background: var(--success);
+            border-radius: 10px;
+            transition: width 1s ease-out;
+        }
+
+        .health-stats {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.75rem;
+            color: var(--text-sub);
+        }
+
+        .health-stats span {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .chip {
+            padding: 0.4rem 0.8rem;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--primary);
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .chip:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- GLOBAL HEADER -->
+        <header class="header">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="text-blue-600">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                Data QA Copilot
+            </div>
+            <div>
+                <span class="badge badge-ai">Enterprise Mode</span>
+            </div>
+        </header>
+
+        <!-- PAGE 1: UPLOAD -->
+        <div id="p1" class="page active">
+            <div class="hero-section">
+                <h1 class="hero-title">Intelligent Data Quality</h1>
+                <p class="hero-subtitle">
+                    Automated cleaning, AI-powered enrichment, and quality assurance for your enterprise datasets.
+                    Supports large CSVs & ZIP archives.
+                </p>
+
+                <div class="upload-box card-glass" id="dropZone">
+                    <div class="upload-icon">☁️</div>
+                    <form id="uploadForm">
+                        <input type="file" id="fileInput" name="file" accept=".csv,.zip" hidden>
+                    </form>
+                    <h3>Drop your CSV or ZIP here</h3>
+                    <p style="color: var(--text-sub); margin-top: 0.5rem;">or click to browse files</p>
+                    <p style="font-size:0.8rem; color: #94a3b8; margin-top: 1rem;">Max size: 500MB • Secure Processing
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 2: DASHBOARD -->
+        <div id="p2" class="page">
+            <div class="header" style="margin-bottom: 1rem;">
+                <h2 style="margin:0;">Analysis Report</h2>
+                <div style="display:flex; gap:1rem;">
+                    <button class="btn btn-secondary" onclick="showPage('p1')">New Scan</button>
+                    <button class="btn btn-success" onclick="downloadFile('qa')">📄 Download QA report</button>
+                    <button class="btn btn-primary" onclick="showPage('p3')">Review Data &rarr;</button>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <!-- Final Score (After Fix) -->
+                <div class="card stat-card blue" style="border-left: 5px solid var(--primary);">
+                    <div class="stat-val" id="valScore">98</div>
+                    <div class="stat-label">Overall Quality Score</div>
+                </div>
+
+                <div class="card stat-card orange">
+                    <div class="stat-val" id="valInvalid">0%</div>
+                    <div class="stat-label">Invalid / Missing Rate</div>
+                </div>
+                <div class="card stat-card red">
+                    <div class="stat-val" id="valIssues">12</div>
+                    <div class="stat-label">Rows with Issues</div>
+                </div>
+                <div class="card stat-card purple">
+                    <div class="stat-val" id="valDupes">0%</div>
+                    <div class="stat-label">Duplicate Rate</div>
+                </div>
+            </div>
+
+            <!-- Column Health Report -->
+            <div class="card" style="margin-bottom: 2rem; padding: 1.5rem;">
+                <h3 style="margin-top:0; border-bottom:1px solid #e2e8f0; padding-bottom:1rem;">📊 Column Health Report
+                </h3>
+                <div id="columnHealthGrid" class="health-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Issue Breakdown Report -->
+            <div class="card" style="margin-bottom: 2rem; padding: 1.5rem;">
+                <h3 style="margin-top:0; border-bottom:1px solid #e2e8f0; padding-bottom:1rem;">Detailed Issue Breakdown
+                </h3>
+                <div style="max-height: 300px; overflow-y: auto;">
+                    <table style="width:100%; text-align:left; font-size:0.9rem;">
+                        <thead style="position:sticky; top:0; background:white;">
+                            <tr style="color:var(--text-sub);">
+                                <th style="padding:0.5rem;">Issue Type</th>
+                                <th style="padding:0.5rem; text-align:right;">Count</th>
+                                <th style="padding:0.5rem; text-align:right;">Impact</th>
+                            </tr>
+                        </thead>
+                        <tbody id="issueBreakdownBody">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card" style="padding: 2rem; text-align: center; color: var(--text-sub);">
+                <h3>Ready for Review</h3>
+                <p>Your data has been processed using standard heuristics and our GenAI engine.</p>
+                <br>
+                <button class="btn btn-primary" onclick="showPage('p3')">Open Data Forge</button>
+            </div>
+        </div>
+
+        <!-- PAGE 3: DATA REVIEW -->
+        <div id="p3" class="page">
+            <div class="card"
+                style="margin-bottom: 2rem; padding: 1.5rem; border-left: 5px solid var(--accent); background: #f0f9ff;">
+                <h3 style="margin-top:0;">Live QA Report</h3>
+                <div class="stats-grid"
+                    style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top:1rem;">
+                    <div>
+                        <div style="font-size: 0.8rem; color: var(--text-sub); font-weight: 600;">INTEGRITY SCORE</div>
+                        <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary);" id="qaPageScore">0%
+                        </div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.8rem; color: var(--text-sub); font-weight: 600;">ERROR RATE</div>
+                        <div style="font-size: 1.5rem; font-weight: 700; color: var(--warning);" id="qaPageRate">0%
+                        </div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.8rem; color: var(--text-sub); font-weight: 600;">TOTAL ISSUES</div>
+                        <div style="font-size: 1.5rem; font-weight: 700;" id="qaPageIssues">0</div>
+                    </div>
+                </div>
+
+                <hr style="border:0; border-top: 1px solid #e2e8f0; margin: 1.5rem 0;">
+                <h4 style="margin:0 0 1rem 0; color: var(--text-sub); font-size: 0.8rem; letter-spacing: 0.05em;">COLUMN
+                    HEALTH STATUS</h4>
+                <div id="page3HealthGrid"
+                    style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <!-- Small health cards for Page 3 -->
+                </div>
+
+                <hr style="border:0; border-top: 1px solid #e2e8f0; margin: 1.5rem 0;">
+                <h4 style="margin:0 0 1rem 0; color: var(--text-sub); font-size: 0.8rem; letter-spacing: 0.05em;">
+                    DETAILED ISSUE BREAKDOWN</h4>
+                <div style="max-height: 200px; overflow-y: auto;">
+                    <table style="width:100%; text-align:left; font-size:0.85rem;">
+                        <thead style="position:sticky; top:0; background:#f0f9ff;">
+                            <tr style="color:var(--text-sub);">
+                                <th style="padding:0.4rem;">Issue Type</th>
+                                <th style="padding:0.4rem; text-align:right;">Count</th>
+                                <th style="padding:0.4rem; text-align:right;">Impact</th>
+                            </tr>
+                        </thead>
+                        <tbody id="page3IssueBreakdown">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="toolbar card"
+                style="margin-bottom: 1.5rem; border-radius: var(--radius-md); flex-wrap: wrap; gap: 1rem;">
+                <div style="font-weight:600;">Data Forge <span id="rowCounts"
+                        style="font-weight:400; color:var(--text-sub); margin-left:1rem;">(Loading...)</span></div>
+
+                <div
+                    style="display:flex; gap:0.5rem; align-items: center; background: white; padding: 0.25rem 0.75rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+                    <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-sub);">Filter Issue:</span>
+                    <select id="issueFilterSelect"
+                        style="border:none; outline:none; font-size: 0.9rem; color: var(--text-main); cursor: pointer;">
+                        <option value="all">Display All Records</option>
+                    </select>
+                    <button class="btn btn-warning" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;"
+                        onclick="applyIssueFilter()">Apply Filter</button>
+                </div>
+
+                <div style="display:flex; gap:0.5rem;">
+                    <button class="btn btn-secondary" onclick="showPage('p2')">&larr; Dashboard</button>
+                    <button class="btn btn-success" onclick="downloadFile('qa')">Download QA report</button>
+                    <button class="btn btn-primary" onclick="downloadFile('csv')">Download CSV</button>
+                    <button class="btn btn-accent" onclick="downloadFile('json')">Download JSON</button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Industry</th>
+                            <th>Job Title</th>
+                            <th>Email</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Rows go here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                    🔍 Deduplication Audit Report
+                </h3>
+                <div class="card" style="padding: 1.5rem;">
+                    <div class="dedupe-grid">
+                        <div class="dedupe-stat">
+                            <label>Total Rows</label>
+                            <span id="dedupeTotal">0</span>
+                        </div>
+                        <div class="dedupe-stat">
+                            <label>Exact Dupes</label>
+                            <span id="dedupeExact">0</span>
+                        </div>
+                        <div class="dedupe-stat">
+                            <label>Partial Dupes</label>
+                            <span id="dedupePartial">0</span>
+                        </div>
+                        <div class="dedupe-stat">
+                            <label>Redundancy %</label>
+                            <span id="dedupePct">0%</span>
+                        </div>
+                    </div>
+
+                    <div id="dedupeGroupsContainer" style="max-height: 400px; overflow-y: auto;">
+                        <p style="text-align:center; padding:2rem; color:var(--text-sub);">
+                            No duplicates analysis available. Upload a file to see results.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                    📋 Data Changes (Audit Log)
+                </h3>
+                <div class="card" style="padding: 1rem; background: #f8fafc; max-height: 300px; overflow-y: auto;">
+                    <table class="audit-table">
+                        <thead>
+                            <tr>
+                                <th>Field</th>
+                                <th>Previous Data</th>
+                                <th>New Data</th>
+                                <th>Method</th>
+                            </tr>
+                        </thead>
+                        <tbody id="auditLogBody">
+                            <tr>
+                                <td colspan="4" style="text-align:center; padding:2rem; color:var(--text-sub);">
+                                    No changes detected yet. Upload a file to see transformations.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <p id="previewFooter"
+                style="text-align: center; margin-top:2rem; color: var(--text-sub); font-size: 0.9rem; display:none;">
+                Showing preview of first <span id="previewLimit">500</span> records. Full dataset available for
+                download.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- LOADER -->
+    <div class="loader-overlay" id="loadingOverlay">
+        <div class="progress-container">
+            <div class="spinner"></div>
+            <h3 style="color: var(--text-main); margin: 1rem 0;">Processing Data...</h3>
+
+            <!-- Progress Bar -->
+            <div class="progress-bar-wrapper">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <p id="progressText" style="color: var(--text-sub); margin: 0.5rem 0;">0% Complete</p>
+
+            <!-- Step Indicators -->
+            <div class="steps-list">
+                <div class="step-item" id="step1">
+                    <span class="step-icon">⏳</span>
+                    <span class="step-label">Validation</span>
+                </div>
+                <div class="step-item" id="step2">
+                    <span class="step-icon">⏳</span>
+                    <span class="step-label">Corrections</span>
+                </div>
+                <div class="step-item" id="step3">
+                    <span class="step-icon">⏳</span>
+                    <span class="step-label">Deduplication</span>
+                </div>
+                <div class="step-item" id="step4">
+                    <span class="step-icon">⏳</span>
+                    <span class="step-label">Job Mapping</span>
+                </div>
+                <div class="step-item" id="step5">
+                    <span class="step-icon">⏳</span>
+                    <span class="step-label">AI Enhancement</span>
+                </div>
+                <div class="step-item" id="step6">
+                    <span class="step-icon">⏳</span>
+                    <span class="step-label">Metrics</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHATBOT WIDGET -->
+    <div class="chat-widget">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <h4>🤖 Data QA Bot</h4>
+                <button style="background:none; border:none; color:white; cursor:pointer; font-size:1.2rem;"
+                    onclick="toggleChat()">&minus;</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="msg msg-ai">Hi! I'm your Data Assistant. Ask me anything about your dataset's health!</div>
+            </div>
+            <div class="chat-chips" id="chatChips">
+                <!-- Suggested question chips will be injected here -->
+            </div>
+            <div class="chat-input-area">
+                <input type="text" class="chat-input" id="chatInputField" placeholder="Type a message..."
+                    onkeypress="if(event.key==='Enter') sendChatMessage()">
+                <button class="btn btn-primary" style="padding: 0.4rem 0.8rem;"
+                    onclick="sendChatMessage()">&rarr;</button>
+            </div>
+        </div>
+        <div class="chat-bubble" onclick="toggleChat()">
+            💬
+        </div>
+    </div>
+
+    <script>
+        // --- LOGIC ---
+        let currentData = null;
+        let currentTimestamp = null;
+
+        function toggleChat() {
+            const win = document.getElementById('chatWindow');
+            win.classList.toggle('open');
+        }
+
+        async function sendChatMessage() {
+            const input = document.getElementById('chatInputField');
+            const text = input.value.trim();
+            if (!text) return;
+
+            // Add user message
+            addMessage(text, 'user');
+            input.value = '';
+
+            // Add typing indicator
+            const typingId = 'typing-' + Date.now();
+            const msgArea = document.getElementById('chatMessages');
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'msg-typing';
+            typingDiv.id = typingId;
+            typingDiv.innerText = 'AI is thinking...';
+            msgArea.appendChild(typingDiv);
+            msgArea.scrollTop = msgArea.scrollHeight;
+
+            try {
+                const res = await fetch('http://localhost:5000/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        query: text,
+                        metrics: currentData ? currentData.metrics : {}
+                    })
+                });
+                const data = await res.json();
+
+                // Remove typing indicator
+                document.getElementById(typingId).remove();
+
+                if (data.response) {
+                    addMessage(data.response, 'ai');
+                } else {
+                    addMessage("Sorry, I encountered an error processing that.", 'ai');
+                }
+            } catch (err) {
+                document.getElementById(typingId).remove();
+                addMessage("Connection failed. Is the server running?", 'ai');
+            }
+        }
+
+        function addMessage(text, role) {
+            const container = document.getElementById('chatMessages');
+            const msg = document.createElement('div');
+            msg.className = `msg msg-${role}`;
+            msg.innerText = text;
+            container.appendChild(msg);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function renderDedupeReport(report) {
+            if (!report) return;
+
+            // 1. Update Stats
+            const s = report.summary;
+            document.getElementById('dedupeTotal').innerText = s.total || 0;
+            document.getElementById('dedupeExact').innerText = s.exact || 0;
+            document.getElementById('dedupePartial').innerText = s.partial || 0;
+            document.getElementById('dedupePct').innerText = (s.pct || 0) + '%';
+
+            // 2. Render Groups
+            const container = document.getElementById('dedupeGroupsContainer');
+            container.innerHTML = '';
+
+            const allGroups = [
+                ...(report.exact_groups || []).map(g => ({ ...g, type: 'Exact' })),
+                ...(report.partial_groups || []).map(g => ({ ...g, type: 'Partial' }))
+            ];
+
+            if (allGroups.length === 0) {
+                container.innerHTML = '<p style="text-align:center; padding:2rem; color:var(--text-sub);">No exact or partial duplicates detected in the CSV file.</p>';
+                return;
+            }
+
+            allGroups.forEach(group => {
+                const div = document.createElement('div');
+                div.className = 'dedupe-group';
+
+                const typeLabel = group.type === 'Exact' ?
+                    '<span class="badge" style="background:#e0f2fe; color:var(--primary);">EXACT MATCH</span>' :
+                    `<span class="score-badge">${group.score}% SIMILARITY</span>`;
+
+                div.innerHTML = `
+                    <h5>
+                        <span><strong>Group ${group.id}</strong> (${group.type})</span>
+                        ${typeLabel}
+                    </h5>
+                    <div style="margin-bottom:0.5rem; font-size:0.85rem;">
+                        ${group.type === 'Exact' ?
+                        `Found ${group.count} identical occurrences.` :
+                        `AI Logic: ${group.reason || 'High similarity detected'}`}
+                    </div>
+                    <div class="row-list">
+                        Row Numbers: ${group.rows.join(', ')}
+                        ${group.primary !== undefined ? `<br><small>Suggested Primary: Row ${group.primary}</small>` : ''}
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function renderChatChips() {
+            const chipContainer = document.getElementById('chatChips');
+            chipContainer.innerHTML = '';
+
+            const suggestions = [
+                "What columns were discovered?",
+                "Tell me about the duplicates",
+                "Explain the Data Integrity Score",
+                "How can I improve this data?"
+            ];
+
+            suggestions.forEach(s => {
+                const b = document.createElement('button');
+                b.className = 'chip';
+                b.innerText = s;
+                b.onclick = () => {
+                    document.getElementById('chatInputField').value = s;
+                    sendChatMessage();
+                };
+                chipContainer.appendChild(b);
+            });
+        }
+
+        // Navigation
+        function showPage(id) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+
+        // Upload
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+
+        dropZone.onclick = () => fileInput.click();
+
+        dropZone.ondragover = (e) => {
+            e.preventDefault();
+            dropZone.style.borderColor = 'var(--primary)';
+        };
+
+        dropZone.ondragleave = (e) => {
+            e.preventDefault();
+            dropZone.style.borderColor = '#e2e8f0';
+        };
+
+        dropZone.ondrop = (e) => {
+            e.preventDefault();
+            fileInput.files = e.dataTransfer.files;
+            handleFileUpload();
+        };
+
+        fileInput.onchange = handleFileUpload;
+
+        async function handleFileUpload() {
+            if (!fileInput.files.length) return;
+
+            const file = fileInput.files[0];
+            const formData = new FormData();
+            formData.append('file', file);
+
+            document.getElementById('loadingOverlay').style.display = 'flex';
+
+            // Simulate progress through steps
+            const steps = [
+                { id: 'step1', duration: 2000, progress: 15 },
+                { id: 'step2', duration: 2000, progress: 30 },
+                { id: 'step3', duration: 3000, progress: 50 },
+                { id: 'step4', duration: 2000, progress: 65 },
+                { id: 'step5', duration: 5000, progress: 85 },
+                { id: 'step6', duration: 2000, progress: 95 }
+            ];
+
+            let currentStep = 0;
+            let progressInterval = null;
+
+            function updateProgress() {
+                if (currentStep >= steps.length) return;
+
+                const step = steps[currentStep];
+
+                // Mark current as active
+                document.getElementById(step.id).classList.add('active');
+                if (currentStep > 0) {
+                    const prevStep = steps[currentStep - 1];
+                    document.getElementById(prevStep.id).classList.remove('active');
+                    document.getElementById(prevStep.id).classList.add('complete');
+                    document.getElementById(prevStep.id).querySelector('.step-icon').innerText = '✓';
+                }
+
+                // Update progress bar
+                document.getElementById('progressBar').style.width = step.progress + '%';
+                document.getElementById('progressText').innerText = step.progress + '% Complete';
+
+                currentStep++;
+            }
+
+            // Start progress simulation
+            updateProgress();
+            progressInterval = setInterval(updateProgress, 2000);
+
+            try {
+                const res = await fetch('http://localhost:5000/api/analyze', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                clearInterval(progressInterval);
+
+                // Complete all steps
+                document.getElementById('progressBar').style.width = '100%';
+                document.getElementById('progressText').innerText = '100% Complete';
+                steps.forEach(s => {
+                    document.getElementById(s.id).classList.add('complete');
+                    document.getElementById(s.id).classList.remove('active');
+                    document.getElementById(s.id).querySelector('.step-icon').innerText = '✓';
+                });
+
+                const data = await res.json();
+
+                if (data.error) {
+                    alert('Error: ' + data.error);
+                } else {
+                    // Success
+                    currentData = data;
+                    currentTimestamp = data.timestamp;
+                    renderDashboard(data);
+                    renderTable(data);
+                    renderDedupeReport(data.dedupe_report);
+                    renderChatChips();
+                    showPage('p2');
+                }
+            } catch (err) {
+                clearInterval(progressInterval);
+                alert('Connection Error: ' + err.message);
+            } finally {
+                document.getElementById('loadingOverlay').style.display = 'none';
+                // Reset progress
+                currentStep = 0;
+                document.getElementById('progressBar').style.width = '0%';
+                document.getElementById('progressText').innerText = '0% Complete';
+                steps.forEach(s => {
+                    document.getElementById(s.id).classList.remove('active', 'complete');
+                    document.getElementById(s.id).querySelector('.step-icon').innerText = '⏳';
+                });
+            }
+        }
+
+        function renderDashboard(data) {
+            const m = data.metrics;
+            const totalRows = data.total_rows || 1;
+            const totalCols = m.column_count || 1;
+            const totalCells = totalRows * totalCols;
+
+            document.getElementById('valScore').innerText = Math.round(m.quality_score) + '%';
+
+            document.getElementById('valIssues').innerText = m.total_issues || 0;
+
+            // Calculate Field-level Error Rate (%)
+            const invalidCount = m.total_field_issues || 0;
+            const errorRate = ((invalidCount / totalCells) * 100).toFixed(2);
+            document.getElementById('valInvalid').innerText = errorRate + '%';
+
+            // Sync Page 3 Live QA Report
+            document.getElementById('qaPageScore').innerText = (100 - errorRate).toFixed(2) + '%';
+            document.getElementById('qaPageRate').innerText = errorRate + '%';
+            document.getElementById('qaPageIssues').innerText = m.total_issues || 0;
+
+            // Populate Filter Dropdown
+            const filterSelect = document.getElementById('issueFilterSelect');
+            filterSelect.innerHTML = '<option value="all">Display All Records</option>';
+
+            // 1. Add Issue Types
+            if (m.issue_summary) {
+                const optGroupIssues = document.createElement('optgroup');
+                optGroupIssues.label = "By Issue Type";
+                Object.keys(m.issue_summary).sort().forEach(key => {
+                    const option = document.createElement('option');
+                    option.value = 'type:' + key;
+                    option.innerText = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                    filterSelect.appendChild(option);
+                });
+                filterSelect.appendChild(optGroupIssues);
+            }
+
+            // 2. Add Column Headers as "Missing [Col]"
+            if (data.data && data.data.length > 0) {
+                const optGroupCols = document.createElement('optgroup');
+                optGroupCols.label = "By Missing Column Data";
+                const ignored = ['has_issues', 'issues', 'corrections_applied', 'ai_suggestions', 'is_duplicate', 'row_id', 'change_history'];
+                Object.keys(data.data[0]).filter(k => !ignored.includes(k)).sort().forEach(key => {
+                    const option = document.createElement('option');
+                    option.value = 'missing:' + key;
+                    const cleanName = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                    option.innerText = 'Missing ' + cleanName;
+                    optGroupCols.appendChild(option);
+                });
+                filterSelect.appendChild(optGroupCols);
+            }
+
+            // Duplicate Rate (%)
+            const dupeCount = m.duplicates_found || 0;
+            const dupePct = (((m.duplicates_found || 0) / totalRows) * 100).toFixed(1);
+            document.getElementById('valDupes').innerText = dupePct + '%';
+            // Add a small count label if duplicates exist
+            if (dupeCount > 0) {
+                document.getElementById('valDupes').innerHTML += `<div style="font-size:0.75rem; font-weight:400; color:var(--text-sub);">${dupeCount} Redundant Rows</div>`;
+            }
+
+            // Render Issue Breakdown Tables (Both Page 2 and Page 3)
+            const breakdownPage2 = document.getElementById('issueBreakdownBody');
+            const breakdownPage3 = document.getElementById('page3IssueBreakdown');
+            breakdownPage2.innerHTML = '';
+            breakdownPage3.innerHTML = '';
+
+            if (m.issue_summary) {
+                const sortedIssues = Object.entries(m.issue_summary).sort((a, b) => b[1] - a[1]);
+
+                sortedIssues.forEach(([key, count]) => {
+                    const label = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                    const pct = ((count / data.total_rows) * 100).toFixed(1);
+
+                    const tr2 = document.createElement('tr');
+                    tr2.innerHTML = `
+                        <td style="padding:0.5rem; border-bottom:1px solid #f1f5f9;">${label}</td>
+                        <td style="padding:0.5rem; text-align:right; border-bottom:1px solid #f1f5f9; font-weight:600;">${count}</td>
+                        <td style="padding:0.5rem; text-align:right; border-bottom:1px solid #f1f5f9; color:var(--text-sub);">${pct}%</td>
+                    `;
+                    breakdownPage2.appendChild(tr2);
+
+                    const tr3 = document.createElement('tr');
+                    tr3.innerHTML = `
+                        <td style="padding:0.4rem; border-bottom:1px solid #eef2f7;">${label}</td>
+                        <td style="padding:0.4rem; text-align:right; border-bottom:1px solid #eef2f7; font-weight:600;">${count}</td>
+                        <td style="padding:0.4rem; text-align:right; border-bottom:1px solid #eef2f7; color:var(--text-sub);">${pct}%</td>
+                    `;
+                    breakdownPage3.appendChild(tr3);
+                });
+            }
+            if (!breakdownPage2.hasChildNodes()) {
+                const emptyMsg = '<tr><td colspan="3" style="padding:1rem; text-align:center; color:var(--text-sub);">No specific issues found.</td></tr>';
+                breakdownPage2.innerHTML = emptyMsg;
+                breakdownPage3.innerHTML = emptyMsg;
+            }
+
+            // 3. Render Column Health
+            const healthGridP2 = document.getElementById('columnHealthGrid');
+            const healthGridP3 = document.getElementById('page3HealthGrid');
+            healthGridP2.innerHTML = '';
+            healthGridP3.innerHTML = '';
+
+            if (m.column_health) {
+                Object.entries(m.column_health).sort((a, b) => b[1].health_pct - a[1].health_pct).forEach(([col, h]) => {
+                    const label = col.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+
+                    // Dashboard (P2) Card
+                    const card2 = document.createElement('div');
+                    card2.className = 'health-card';
+                    card2.innerHTML = `
+                        <h5>
+                            <span>${label}</span>
+                            <span style="color:${h.health_pct > 80 ? 'var(--success)' : 'var(--warning)'}">${h.health_pct}%</span>
+                        </h5>
+                        <div class="health-bar-bg">
+                            <div class="health-bar-fill" style="width: ${h.health_pct}%; background: ${h.health_pct > 80 ? 'var(--success)' : (h.health_pct > 50 ? 'var(--warning)' : 'var(--danger)')}"></div>
+                        </div>
+                        <div class="health-stats">
+                            <span><strong style="color:var(--danger)">${h.missing}</strong> Missing</span>
+                            <span><strong style="color:var(--warning)">${h.invalid}</strong> Invalid</span>
+                        </div>
+                    `;
+                    healthGridP2.appendChild(card2);
+
+                    // Data Forge (P3) Small Card
+                    const card3 = document.createElement('div');
+                    card3.style = "padding: 0.75rem; background:white; border: 1px solid #eef2f7; border-radius: 8px;";
+                    card3.innerHTML = `
+                        <div style="font-size: 0.75rem; color: var(--text-sub); display:flex; justify-content:space-between; margin-bottom:0.25rem;">
+                            <span>${label}</span>
+                            <strong>${h.health_pct}%</strong>
+                        </div>
+                        <div style="height:4px; background:#f1f5f9; border-radius:10px; overflow:hidden;">
+                            <div style="height:100%; width:${h.health_pct}%; background:${h.health_pct > 80 ? 'var(--success)' : 'var(--warning)'};"></div>
+                        </div>
+                    `;
+                    healthGridP3.appendChild(card3);
+                });
+            }
+
+        }
+
+        function applyIssueFilter() {
+            const val = document.getElementById('issueFilterSelect').value;
+            renderTable(currentData, val);
+        }
+
+        function renderTable(data, issueFilter = 'all') {
+            const tbody = document.getElementById('tableBody');
+            const thead = document.querySelector('#dataTable thead');
+            const auditBody = document.getElementById('auditLogBody');
+
+            tbody.innerHTML = '';
+            thead.innerHTML = '';
+            auditBody.innerHTML = '';
+
+            let rowsToRender = data.data;
+            if (issueFilter !== 'all') {
+                rowsToRender = rowsToRender.filter(row => {
+                    if (!row.issues) return false;
+                    const issuesArray = row.issues.split(';').map(i => i.trim());
+
+                    if (issueFilter.startsWith('type:')) {
+                        const type = issueFilter.replace('type:', '');
+                        return issuesArray.includes(type);
+                    } else if (issueFilter.startsWith('missing:')) {
+                        const colName = issueFilter.replace('missing:', '');
+                        const val = row[colName];
+                        // Return true if value is null, undefined, or empty string/whitespace
+                        return val === null || val === undefined || String(val).trim() === '';
+                    }
+                    return false;
+                });
+            }
+
+            // Populate Audit Log from these rows
+            let auditEntries = [];
+            rowsToRender.forEach(row => {
+                if (row.change_history) {
+                    try {
+                        const history = JSON.parse(row.change_history);
+                        history.forEach(h => auditEntries.push(h));
+                    } catch (e) { }
+                }
+            });
+
+            if (auditEntries.length === 0) {
+                auditBody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding:1.5rem; color:var(--text-sub);">No specific changes to display for the current selection.</td></tr>';
+            } else {
+                // Show last 50 changes to avoid bloat
+                auditEntries.slice(-50).reverse().forEach(entry => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td><strong>${entry.field}</strong></td>
+                        <td><span class="change-old">${entry.old || 'empty'}</span></td>
+                        <td><span class="change-new">${entry.new}</span></td>
+                        <td><span class="badge ${entry.method === 'AI' ? 'badge-ai' : 'badge-ok'}">${entry.method || 'Correction'}</span></td>
+                    `;
+                    auditBody.appendChild(tr);
+                });
+            }
+
+            const isTruncated = data.total_rows > (data.data.length);
+
+            // Show count
+            if (issueFilter !== 'all') {
+                document.getElementById('rowCounts').innerText = `Filtered: Showing ${rowsToRender.length} matches in preview`;
+                document.getElementById('previewFooter').style.display = 'none';
+            } else if (isTruncated) {
+                document.getElementById('rowCounts').innerText = `Showing first ${rowsToRender.length} of ${data.total_rows} rows`;
+                document.getElementById('previewFooter').style.display = 'block';
+                document.getElementById('previewLimit').innerText = rowsToRender.length;
+            } else {
+                document.getElementById('rowCounts').innerText = `Showing all ${data.total_rows} rows`;
+                document.getElementById('previewFooter').style.display = 'none';
+            }
+
+            // Dynamic Column Detection
+            const ignoredCols = ['has_issues', 'issues', 'corrections_applied', 'ai_suggestions', 'is_duplicate', 'row_id', 'change_history'];
+            const displayKeys = data.data.length > 0 ? Object.keys(data.data[0]).filter(k => !ignoredCols.includes(k)) : [];
+
+            if (rowsToRender.length === 0) {
+                const colSpan = displayKeys.length + 1;
+                tbody.innerHTML = `<tr><td colspan="${colSpan}" style="text-align:center; padding:4rem; color:var(--text-sub);">
+                    <div style="font-size: 1.2rem; margin-bottom: 0.5rem;">🕵️ No data matching the filter</div>
+                    <p style="font-size: 0.9rem;">Try selecting a different filter or "Display All Records"</p>
+                </td></tr>`;
+                return;
+            }
+
+            // 1. Build Header
+            const trHead = document.createElement('tr');
+            displayKeys.forEach(key => {
+                const th = document.createElement('th');
+                th.innerText = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                trHead.appendChild(th);
+            });
+            const thStatus = document.createElement('th');
+            thStatus.innerText = 'STATUS';
+            trHead.appendChild(thStatus);
+            thead.appendChild(trHead);
+
+            // 2. Build Rows
+            rowsToRender.forEach(row => {
+                const tr = document.createElement('tr');
+                displayKeys.forEach(key => {
+                    const td = document.createElement('td');
+                    let val = row[key];
+                    td.innerText = val === null || val === undefined ? '' : val;
+                    tr.appendChild(td);
+                });
+
+                const tdStatus = document.createElement('td');
+                let badge = '';
+                if (row.corrections_applied) {
+                    badge = row.corrections_applied.includes('AI') ? '<span class="badge badge-ai">AI Fixed</span>' : '<span class="badge badge-ok">Cleaned</span>';
+                } else if (row.has_issues) {
+                    badge = '<span class="badge badge-err">Issue</span>';
+                } else {
+                    badge = '<span class="badge badge-ok">Valid</span>';
+                }
+                tdStatus.innerHTML = badge;
+                tr.appendChild(tdStatus);
+                tbody.appendChild(tr);
+            });
+        }
+
+        function downloadFile(type) {
+            if (!currentTimestamp) return;
+            window.location.href = `http://localhost:5000/api/download/${currentTimestamp}/${type}`;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+Name,Website,Country,Industry,Company Size,Revenue (Billion USD),Employees,Domain,Founded Year
+Walmart,walmart.com,United States,Retail,Enterprise,681.0,2100000,Retail and Wholesale,1962
+Amazon,amazon.com,United States,E-commerce & Cloud,Enterprise,638.0,1556000,"Retail, Cloud Computing, Technology",1994
+State Grid Corporation of China,sgcc.com.cn,China,Utilities,Enterprise,548.4,1354310,Energy Distribution,2002
+Saudi Aramco,saudiaramco.com,Saudi Arabia,Oil & Gas,Enterprise,480.2,75118,Energy,1933
+China National Petroleum,cnpc.com.cn,China,Oil & Gas,Enterprise,412.6,985155,Energy,1988
+Sinopec,sinopecgroup.com,China,Oil & Gas,Enterprise,407.5,495096,Energy,1998
+UnitedHealth Group,unitedhealthgroup.com,United States,Healthcare,Enterprise,400.3,400000,Health Insurance,1977
+Apple,apple.com,United States,Technology,Enterprise,391.0,164000,Consumer Electronics,1976
+CVS Health,cvshealth.com,United States,Healthcare & Retail,Enterprise,372.8,259500,Pharmacy and Healthcare,1963
+Berkshire Hathaway,berkshirehathaway.com,United States,Diversified Financials,Enterprise,371.4,392400,"Investment, Insurance",1956
+Microsoft,microsoft.com,United States,Software & IT Services,Enterprise,261.8,220000,"Cloud Computing, Software",1975
+Alphabet (Google),alphabet.com,United States,Technology,Enterprise,350.0,183323,"Search, Advertising, Cloud",1998
+Meta,meta.com,United States,Social Media & Technology,Enterprise,134.9,67317,"Social Media, Advertising",2004
+Intel,intel.com,United States,Semiconductors,Enterprise,77.9,123000,"Microprocessors, Chips",1968
+IBM,ibm.com,United States,IT Services & Cloud,Enterprise,73.6,280000,"Enterprise Software, Consulting",1911
+Cisco Systems,cisco.com,United States,Networking Hardware,Enterprise,56.5,82000,"Network Equipment, Software",1984
+Oracle,oracle.com,United States,Software,Enterprise,50.2,158000,"Database, Cloud Services",1977
+Adobe,adobe.com,United States,Software,Large,19.9,28000,"Design Software, Acrobat",1982
+Salesforce,salesforce.com,United States,Cloud Software,Large,36.9,80000,CRM Cloud Software,1999
+SAP,sap.com,Germany,Enterprise Software,Enterprise,34.0,108000,ERP Software,1972
+Toyota Motor,toyota.com,Japan,Automotive,Enterprise,315.1,383853,"Vehicles, Hybrid Technology",1937
+Volkswagen Group,volkswagen.com,Germany,Automotive,Enterprise,351.1,646501,Automobiles,1937
+Mercedes-Benz,mercedes-benz.com,Germany,Automotive,Large,175.8,180000,Luxury Vehicles,1886
+BMW,bmw.com,Germany,Automotive,Large,112.8,149000,Luxury Vehicles,1916
+Ford Motor,ford.com,United States,Automotive,Enterprise,127.1,177000,Vehicles,1903
+General Motors,gm.com,United States,Automotive,Enterprise,122.5,180000,Vehicles,1908
+Honda Motor,honda.com,Japan,Automotive,Large,124.2,215000,"Vehicles, Motorcycles",1948
+Nissan Motor,nissan.com,Japan,Automotive,Large,74.2,130000,Vehicles,1933
+Hyundai Motor,hyundai.com,South Korea,Automotive,Large,88.2,122000,Vehicles,1967
+Tesla,tesla.com,United States,Electric Vehicles,Large,81.5,128000,"Electric Vehicles, Energy",2003
+JPMorgan Chase,jpmorganchase.com,United States,Banking & Finance,Enterprise,278.9,317233,"Banking, Investment Services",1799
+Bank of America,bofa.com,United States,Banking,Enterprise,196.5,210000,Commercial Banking,1874
+Industrial and Commercial Bank of China,icbc.com.cn,China,Banking,Enterprise,222.0,450000,Commercial Banking,2005
+China Construction Bank,ccb.com,China,Banking,Enterprise,196.7,360000,Commercial Banking,1954
+Goldman Sachs,goldmansachs.com,United States,Investment Banking,Large,120.1,43700,"Investment Banking, Trading",1869
+Wells Fargo,wellsfargo.com,United States,Banking,Large,124.0,200000,Commercial Banking,1852
+Citigroup,citigroup.com,United States,Banking & Finance,Large,116.4,190000,Global Banking,1998
+HSBC,hsbc.com,United Kingdom,Banking,Enterprise,145.2,234000,Global Banking,1865
+Agricultural Bank of China,abchina.com,China,Banking,Enterprise,198.0,450000,Commercial Banking,1979
+Bank of China,boc.cn,China,Banking,Enterprise,177.1,320000,Commercial Banking,1912
+ExxonMobil,exxonmobil.com,United States,Oil & Gas,Enterprise,349.6,60900,"Energy, Petroleum",1870
+Shell,shell.com,United Kingdom,Oil & Gas,Enterprise,289.0,96000,"Energy, Oil & Gas",1907
+Enel,enel.com,Italy,Renewable Energy,Large,74.0,74000,"Electric Power, Renewables",1962
+Duke Energy,duke-energy.com,United States,Utilities,Large,61.0,68000,Electric Utility,1904
+American Electric Power,aep.com,United States,Utilities,Large,52.0,24500,Electric Utility,1906
+NextEra Energy,nexteraenergy.com,United States,Renewable Energy,Large,59.5,45000,Electric & Renewable Power,1925
+Equinor,equinor.com,Norway,Oil & Gas,Large,117.9,20000,"Energy, Oil & Gas",1972
+BP,bp.com,United Kingdom,Oil & Gas,Large,169.5,65000,"Energy, Oil & Gas",1909
+TotalEnergies,totalenergies.com,France,Oil & Gas,Enterprise,233.8,101000,"Energy, Oil & Gas",1924
+Chevron,chevron.com,United States,Oil & Gas,Large,178.1,44400,"Energy, Oil & Gas",1879
+Johnson & Johnson,jnj.com,United States,Pharmaceuticals,Enterprise,94.9,133500,"Healthcare, Pharmaceuticals",1886
+Hoffmann-La Roche,roche.com,Switzerland,Pharmaceuticals,Large,64.3,103000,"Pharmaceuticals, Diagnostics",1896
+Sinopharm,sinopharm.com,China,Pharmaceuticals,Large,77.3,180000,Pharmaceuticals,2003
+Pfizer,pfizer.com,United States,Pharmaceuticals,Large,58.5,32000,Pharmaceuticals,1849
+Eli Lilly,lilly.com,United States,Pharmaceuticals,Large,48.6,44000,Pharmaceuticals,1876
+AbbVie,abbvie.com,United States,Pharmaceuticals,Large,56.3,50000,Pharmaceuticals,2013
+Merck,merck.com,United States,Pharmaceuticals,Large,59.3,73000,Pharmaceuticals,1668
+Bristol Myers Squibb,bms.com,United States,Pharmaceuticals,Large,47.2,45000,Pharmaceuticals,1858
+Thermo Fisher Scientific,thermofisher.com,United States,Life Sciences,Large,45.5,145000,Laboratory Equipment,1956
+Danaher,danaher.com,United States,Conglomerate,Large,34.3,68000,"Life Sciences, Diagnostics",1969
+Nestlé,nestle.com,Switzerland,Food & Beverage,Enterprise,89.9,291000,"Food Products, Beverages",1866
+Procter & Gamble,pg.com,United States,Consumer Goods,Enterprise,71.0,111000,Consumer Products,1837
+PepsiCo,pepsico.com,United States,Food & Beverage,Enterprise,70.4,320000,"Beverages, Snacks",1893
+Anheuser-Busch InBev,ab-inbev.com,Belgium,Beverages,Enterprise,52.3,170000,"Beer, Beverages",1366
+Mondelēz International,mondelez.com,United States,Food,Large,33.7,85000,"Snacks, Confectionery",1903
+General Mills,generalmills.com,United States,Food,Large,21.3,40000,"Cereals, Pet Food",1928
+Unilever,unilever.com,United Kingdom,Consumer Goods,Enterprise,57.8,130000,"Personal Care, Foods",1930
+Colgate-Palmolive,colgatepalmolive.com,United States,Consumer Goods,Large,19.0,29000,Personal Care Products,1806
+Coca-Cola,coca-cola.com,United States,Beverages,Enterprise,46.2,200000,Beverages,1886
+Henkel,henkel.com,Germany,Consumer Goods,Large,23.3,51000,Household & Personal Care,1876
+Costco Wholesale,costco.com,United States,Retail,Enterprise,254.5,333000,Warehouse Retail,1983
+LVMH Moët Hennessy Louis Vuitton,lvmh.com,France,Luxury Retail,Enterprise,97.3,192000,Luxury Goods,1987
+Alibaba Group,alibaba.com,China,E-commerce,Enterprise,120.5,254000,"E-commerce, Cloud",1999
+JD.com,jd.com,China,E-commerce,Large,92.5,290000,E-commerce,1998
+Pinduoduo,pinduoduo.com,China,E-commerce,Large,12.3,3000,"E-commerce, Marketplace",2015
+Home Depot,homedepot.com,United States,Retail,Large,152.4,465000,Home Improvement Retail,1978
+Lowe's Companies,lowes.com,United States,Retail,Large,87.7,330000,Home Improvement Retail,1946
+Target,target.com,United States,Retail,Large,107.6,415000,General Merchandise Retail,1962
+Best Buy,bestbuy.com,United States,Retail,Large,35.6,71000,Electronics Retail,1966
+Carrefour,carrefour.com,France,Retail,Enterprise,58.4,380000,"Hypermarket, Grocery",1959
+Samsung Electronics,samsung.com,South Korea,Electronics,Enterprise,200.7,267000,"Consumer Electronics, Semiconductors",1938
+Foxconn (Hon Hai Precision Industry),foxconn.com,Taiwan,Electronics Manufacturing,Enterprise,181.9,803000,Electronics Manufacturing,1974
+Canon,canon.com,Japan,Electronics,Large,38.3,189000,"Cameras, Office Equipment",1937
+Mitsubishi Electric,mitsubishielectric.com,Japan,Diversified Manufacturing,Large,48.5,180000,Electrical Equipment,1921
+Siemens,siemens.com,Germany,Conglomerate,Enterprise,63.9,318000,Industrial Engineering,1847
+Bosch,bosch.com,Germany,Engineering,Large,81.5,400000,"Automotive Parts, Technology",1886
+Hitachi,hitachi.com,Japan,Conglomerate,Large,82.3,280000,"Electrical Equipment, Industrial",1910
+Panasonic,panasonic.com,Japan,Electronics,Large,63.2,247000,Consumer Electronics,1918
+Sony,sony.com,Japan,Electronics & Entertainment,Large,84.9,205000,"Consumer Electronics, Gaming",1946
+Philips,philips.com,Netherlands,Electronics,Large,19.2,130000,"Consumer Electronics, Healthcare",1891
+BASF,basf.com,Germany,Chemicals,Enterprise,69.5,112000,"Chemicals, Plastics",1865
+Dow Inc.,dow.com,United States,Chemicals,Large,56.5,112000,"Chemicals, Materials",1897
+DuPont,dupont.com,United States,Chemicals,Large,13.1,32000,"Chemicals, Materials",1802
+LyondellBasell,lyondellbasell.com,Netherlands,Chemicals,Large,50.2,18000,"Plastics, Chemical Manufacturing",1953
+Arkema,arkema.com,France,Chemicals,Large,11.5,20000,Chemical Manufacturing,2004
+Linde plc,linde.com,United States,Industrial Gases,Enterprise,32.8,80000,"Industrial Gases, Engineering",1879
+Air Liquide,airliquide.com,France,Industrial Gases,Large,29.8,75000,Industrial Gases,1902
+Solvay,solvay.com,Belgium,Chemicals,Large,15.9,28000,"Chemicals, Materials",1863
+ArcelorMittal,arcelormittal.com,Luxembourg,Steel,Large,83.0,130000,Steel Manufacturing,2006
+Nippon Steel,nipponsteel.com,Japan,Steel,Large,67.2,99000,Steel Manufacturing,1901
+Taiwan Semiconductor Manufacturing,tsmc.com,Taiwan,Semiconductors,Enterprise,75.9,73000,Chip Manufacturing,1987
+Samsung Semiconductor,samsung.com,South Korea,Semiconductors,Large,78.5,267000,"Memory Chips, Semiconductors",1938
+SK Hynix,skhynix.com,South Korea,Semiconductors,Large,36.9,118000,Memory Chips,1983
+Broadcom,broadcom.com,United States,Semiconductors,Large,61.5,22000,"Infrastructure Software, Chips",1991
+Qualcomm,qualcomm.com,United States,Semiconductors,Large,43.8,51000,"Mobile Chips, Software",1985
+Advanced Micro Devices (AMD),amd.com,United States,Semiconductors,Large,26.5,26000,"Processors, Graphics Chips",1969
+MediaTek,mediatek.com,Taiwan,Semiconductors,Large,12.5,15000,"Chips for Mobile, IoT",1997
+Nvidia,nvidia.com,United States,Semiconductors,Large,60.9,32000,"Graphics Processors, AI Chips",1993
+Applied Materials,appliedmaterials.com,United States,Semiconductor Equipment,Large,28.3,38000,Chip Manufacturing Equipment,1967
+ASML Holding,asml.com,Netherlands,Semiconductor Equipment,Large,27.6,39000,Lithography Equipment,1984
+China Mobile,chinamobileltd.com,China,Telecommunications,Enterprise,129.2,480000,Mobile Telecom,2008
+China Unicom,chinaunicom.com.cn,China,Telecommunications,Enterprise,74.1,310000,Telecom Services,2008
+Verizon Communications,verizon.com,United States,Telecommunications,Enterprise,134.0,169000,Mobile & Broadband,1983
+AT&T,att.com,United States,Telecommunications,Enterprise,123.1,224000,"Mobile, Broadband, Media",1882
+Telefónica,telefonica.com,Spain,Telecommunications,Large,51.5,124000,Telecom Services,1924
+Vodafone Group,vodafone.com,United Kingdom,Telecommunications,Enterprise,52.4,240000,Mobile Telecom,1984
+Deutsche Telekom,telekom.com,Germany,Telecommunications,Enterprise,93.7,238000,Telecom Services,1995
+Swisscom,swisscom.com,Switzerland,Telecommunications,Large,13.4,22000,Telecom Services,1998
+Orange,orange.com,France,Telecommunications,Enterprise,54.8,149000,Telecom Services,1988
+BT Group,bt.com,United Kingdom,Telecommunications,Large,24.5,130000,Telecom Services,1844
+American Airlines Group,aa.com,United States,Airlines,Large,59.7,130000,Air Transportation,1930
+Delta Air Lines,delta.com,United States,Airlines,Large,56.9,90000,Air Transportation,1924
+United Airlines,united.com,United States,Airlines,Large,53.7,89000,Air Transportation,1926
+Lufthansa Group,lufthansa.com,Germany,Airlines,Large,39.6,134000,Air Transportation,1926
+China Southern Airlines,csair.com,China,Airlines,Large,20.8,109000,Air Transportation,1991
+Airbus,airbus.com,France,Aerospace & Defense,Large,56.9,155000,Aircraft Manufacturing,1970
+Boeing,boeing.com,United States,Aerospace & Defense,Large,58.2,171000,Aircraft Manufacturing,1916
+Lockheed Martin,lockheedmartin.com,United States,Aerospace & Defense,Large,65.4,115000,"Defense, Aerospace",1995
+Raytheon Technologies,rtx.com,United States,Aerospace & Defense,Large,56.6,182000,"Aerospace, Defense",1913
+General Electric,ge.com,United States,Diversified Conglomerate,Large,79.6,170000,"Industrial Equipment, Aviation",1892
+China Life Insurance,e-chinalife.com,China,Insurance,Enterprise,189.5,350000,Life Insurance,1992
+State Farm Mutual,statefarm.com,United States,Insurance,Large,85.4,58000,Insurance,1922
+AXA,axa.com,France,Insurance,Enterprise,149.4,166000,Insurance,1817
+Munich Re,munichre.com,Germany,Insurance,Large,65.8,48000,Reinsurance,1880
+Allianz,allianz.com,Germany,Insurance,Enterprise,163.4,197000,Insurance,1890
+Ping An Insurance,pingan.com,China,Insurance,Large,197.8,775000,"Insurance, Financial Services",1988
+Liberty Mutual,libertymutual.com,United States,Insurance,Large,48.2,50000,Insurance,1912
+Lemonade,lemonade.com,United States,InsurTech,Medium,0.3,1200,Digital Insurance,2015
+Zillow Group,zillow.com,United States,Real Estate Tech,Large,2.6,9000,Real Estate Marketplace,2006
+Realogy,realogy.com,United States,Real Estate,Large,6.1,55000,Real Estate Services,1989
+Marriott International,marriott.com,United States,Hospitality,Large,28.8,674000,Hotels & Resorts,1927
+Hilton Hotels,hilton.com,United States,Hospitality,Large,15.3,585000,Hotels & Resorts,1919
+Airbnb,airbnb.com,United States,Travel Technology,Large,8.4,8000,"Vacation Rentals, Travel",2008
+Booking.com,booking.com,Netherlands,Travel Technology,Large,17.1,30000,"Travel Booking, Reservations",1997
+TripAdvisor,tripadvisor.com,United States,Travel Technology,Large,2.0,3800,"Travel Reviews, Bookings",2000
+Expedia Group,expediagroup.com,United States,Travel Technology,Large,14.3,26000,Online Travel Agency,1996
+Accor Hotels,accor.com,France,Hospitality,Large,5.7,340000,Hotels & Hospitality,1967
+Las Vegas Sands,sands.com,United States,Hospitality & Gaming,Large,13.8,55000,"Casinos, Resorts",1952

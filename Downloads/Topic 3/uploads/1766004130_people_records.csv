@@ -1,0 +1,151 @@
+Name,Email,Phone,Title,Department,Company,Role Function,Employee ID,Status
+Judith Davis,judith.davis2386@yahoo.com,+44 892-858-9935,Chief Technology Officer,Research & Development,Salesforce,Executive Leadership,EMP01001,Active
+Lauren Ramirez,lauren.ramirez3911@yahoo.com,+1-800 816-127-4257,Chief Financial Officer,Technology,Meta,Executive Leadership,EMP01002,On Leave
+Sharon Anderson,sharon.anderson206@work.com,+33 914-532-6574,Account Executive,Infrastructure,Toyota,Sales,EMP01003,Active
+Karen Wilson,karen.wilson6324@gmail.com,+44 567-967-6635,Consultant,Customer Success,Tesla,Consulting,EMP01004,On Leave
+Kimberly Morgan,kimberly.morgan6301@gmail.com,+44 765-400-6925,Chief Financial Officer,Product,Samsung,Executive Leadership,EMP01005,On Leave
+Mark Stewart,mark.stewart4841@yahoo.com,+44 438-987-2654,Chief Marketing Officer,Finance,Pinterest,Executive Leadership,EMP01006,Inactive
+Donna Robinson,donna.robinson5920@outlook.com,+49 886-373-2169,Accountant,Support,Oracle,Sales,EMP01007,On Leave
+Judith Hernandez,judith.hernandez6316@company.com,+86 855-804-4598,Software Architect,Compliance,Oracle,Technical,EMP01008,Active
+Douglas Rogers,douglas.rogers5268@gmail.com,+91 474-167-4456,Chief Operating Officer,Compliance,Broadcom,Executive Leadership,EMP01009,On Leave
+Gloria Lee,gloria.lee7617@email.com,+33 471-242-5040,Senior Developer,Engineering,TotalEnergies,Technical,EMP01010,On Leave
+Scott Taylor,scott.taylor6643@mail.com,+81 424-241-9348,Legal Advisor,Infrastructure,Pfizer,Consulting,EMP01011,Inactive
+Elizabeth Murphy,elizabeth.murphy2721@email.com,+91 810-165-7304,Chief Operating Officer,Sales,Bank of America,Executive Leadership,EMP01012,Inactive
+Raymond Robinson,raymond.robinson288@work.com,+44 898-649-5371,UI/UX Designer,Research & Development,Sony,Design,EMP01013,Active
+Thomas Jackson,thomas.jackson4415@gmail.com,+1-800 980-282-9317,Quality Assurance Manager,Operations,Procter & Gamble,Middle Management,EMP01014,Active
+Alexander Martin,alexander.martin2604@yahoo.com,+81 980-265-9837,Assistant,Data Science,Uber,Operations,EMP01015,On Leave
+James Phillips,james.phillips6047@gmail.com,+86 445-159-4946,Product Manager,Engineering,Amazon,Middle Management,EMP01016,On Leave
+Richard Garcia,richard.garcia8827@gmail.com,+33 331-775-8787,Technical Support Specialist,Engineering,Broadcom,Customer Support,EMP01017,On Leave
+Nancy Taylor,nancy.taylor8935@yahoo.com,+49 930-419-7537,UI/UX Designer,Design,Pfizer,Design,EMP01018,Active
+Nicholas Mason,nicholas.mason3781@yahoo.com,+44 546-121-4770,UI/UX Designer,Product,JPMorgan Chase,Design,EMP01019,On Leave
+Steven Smith,steven.smith614@gmail.com,+81 272-626-4899,Chief Marketing Officer,Finance,Adobe,Executive Leadership,EMP01020,Active
+Andrea Young,andrea.young9455@email.com,+1-888 684-348-8749,Senior Developer,Security,Goldman Sachs,Technical,EMP01021,Inactive
+Mark Miller,mark.miller6835@company.com,+61 946-155-2612,President,Strategic Planning,Shell,Executive Leadership,EMP01022,Active
+Rebecca Morris,rebecca.morris3216@yahoo.com,+1-800 659-243-7912,Project Manager,Sales,Salesforce,Middle Management,EMP01023,Active
+Donna Robinson,donna.robinson9116@work.com,+44 251-767-9856,Data Scientist,Marketing,Nestlé,Analysis,EMP01024,Active
+Elizabeth Ortiz,elizabeth.ortiz8056@company.com,+61 418-985-7570,Consultant,Compliance,Oracle,Consulting,EMP01025,Active
+Nancy Harris,nancy.harris7554@work.com,+86 633-813-8973,Chief Executive Officer,Business Development,SAP,Executive Leadership,EMP01026,Active
+Mark Jackson,mark.jackson8983@email.com,+1 965-421-1936,Senior Developer,Finance,Booking.com,Technical,EMP01027,Active
+Samuel Walker,samuel.walker8420@gmail.com,+44 390-170-2113,Graphic Designer,Data Science,Oracle,Design,EMP01028,Active
+Rebecca Davis,rebecca.davis751@mail.com,+1-888 283-529-9565,Database Administrator,Compliance,Booking.com,Analysis,EMP01029,Active
+Kimberly Wilson,kimberly.wilson6584@outlook.com,+33 887-760-5915,Recruiter,Customer Success,Salesforce,Human Resources,EMP01030,Inactive
+Brian Ortiz,brian.ortiz9324@company.com,+44 275-650-4492,Consultant,Marketing,Walmart,Consulting,EMP01031,On Leave
+Kimberly Rodriguez,kimberly.rodriguez6154@yahoo.com,+86 361-548-9900,Sales Manager,Marketing,Airbus,Middle Management,EMP01032,Active
+Gregory Morgan,gregory.morgan9186@email.com,+86 879-206-3200,HR Specialist,Data Science,Walmart,Human Resources,EMP01033,Active
+Thomas Gomez,thomas.gomez4716@outlook.com,+1-888 415-834-6617,President,Security,Bank of America,Executive Leadership,EMP01034,Active
+Cheryl Parker,cheryl.parker932@outlook.com,+44 849-533-5533,Data Analyst,Data Science,LVMH,Analysis,EMP01035,Active
+James Perez,james.perez2747@outlook.com,+61 764-822-8007,Strategist,Human Resources,Twitter,Operations,EMP01036,On Leave
+Mary Davis,mary.davis6149@gmail.com,+1-888 765-251-8041,Chief Marketing Officer,Human Resources,Samsung,Executive Leadership,EMP01037,Active
+Jennifer Martin,jennifer.martin3541@outlook.com,+49 882-205-6794,Marketing Manager,Finance,Boeing,Middle Management,EMP01038,On Leave
+Ryan Campbell,ryan.campbell2762@work.com,+33 622-125-3938,Legal Advisor,Human Resources,Salesforce,Consulting,EMP01039,Active
+Ryan Morgan,ryan.morgan1871@yahoo.com,+91 239-979-8711,Recruiter,Compliance,Toyota,Human Resources,EMP01040,Active
+Betty Peterson,betty.peterson3828@work.com,+49 224-775-4164,Sales Representative,Support,BMW,Sales,EMP01041,Inactive
+George Moore,george.moore8446@email.com,+91 895-963-9785,Chief Marketing Officer,Research & Development,Shell,Executive Leadership,EMP01042,Active
+Patricia Davis,patricia.davis726@outlook.com,+44 810-544-6663,Data Analyst,Operations,Booking.com,Analysis,EMP01043,Active
+Brenda Phillips,brenda.phillips3214@mail.com,+86 245-825-8144,Graphic Designer,Sales,BP,Design,EMP01044,Active
+Justin Ortiz,justin.ortiz3328@email.com,+81 641-171-6409,Coordinator,Security,Netflix,Operations,EMP01045,On Leave
+Brian Edwards,brian.edwards6791@outlook.com,+81 612-813-5844,Vice President,Quality Assurance,Alibaba,Executive Leadership,EMP01046,On Leave
+Charles Gonzalez,charles.gonzalez2951@email.com,+1-888 782-408-7653,Operations Manager,Business Development,Netflix,Middle Management,EMP01047,On Leave
+James Martin,james.martin9602@work.com,+1-888 870-429-8618,Systems Administrator,Legal,Pfizer,Operations,EMP01048,Inactive
+Nicholas Collins,nicholas.collins2880@work.com,+44 490-627-6491,Senior Developer,Data Science,Unilever,Technical,EMP01049,Active
+Henry Thomas,henry.thomas3362@work.com,+33 225-147-5011,Training Specialist,Quality Assurance,Adobe,Operations,EMP01050,Inactive
+Gregory Reed,gregory.reed9531@company.com,+49 935-813-7291,Strategist,Marketing,Procter & Gamble,Operations,EMP01051,Inactive
+Rebecca Thomas,rebecca.thomas1846@work.com,+91 424-280-9486,Director,Technology,Boeing,Senior Management,EMP01052,Inactive
+William Scott,william.scott7712@yahoo.com,+1-800 772-709-6198,Data Scientist,Sales,Procter & Gamble,Analysis,EMP01053,Inactive
+Gregory Peterson,gregory.peterson9076@work.com,+61 362-861-8777,Technical Support Specialist,Data Science,Pfizer,Customer Support,EMP01054,Inactive
+Kimberly Murphy,kimberly.murphy8640@work.com,+61 841-344-5499,Data Scientist,Research & Development,Verizon,Analysis,EMP01055,Inactive
+Barbara Stewart,barbara.stewart5338@outlook.com,+1-800 282-241-3471,Systems Administrator,Compliance,Toyota,Operations,EMP01056,Active
+Stephanie Reyes,stephanie.reyes6778@company.com,+81 755-577-7812,Director,Legal,Apple,Senior Management,EMP01057,Active
+Donald Cooper,donald.cooper9669@work.com,+1 983-689-7232,Operations Manager,Business Development,Boeing,Middle Management,EMP01058,Inactive
+James Thompson,james.thompson6965@work.com,+1-800 965-852-9947,Network Engineer,Business Development,AMD,Technical,EMP01059,On Leave
+Steven Young,steven.young575@company.com,+91 544-784-7624,Software Developer,Research & Development,Pfizer,Technical,EMP01060,Active
+Catherine Russell,catherine.russell6555@gmail.com,+1-888 777-778-1444,Senior Director,Design,Samsung,Senior Management,EMP01061,Active
+Jack Ramirez,jack.ramirez4362@gmail.com,+91 535-316-8449,Senior Director,Product,Cisco,Senior Management,EMP01062,Active
+Maria Murphy,maria.murphy7006@work.com,+86 283-581-1317,HR Manager,Research & Development,AT&T,Middle Management,EMP01063,On Leave
+William Thompson,william.thompson759@email.com,+1 453-304-1333,Software Developer,Marketing,Verizon,Technical,EMP01064,On Leave
+Karen Thomas,karen.thomas9340@gmail.com,+49 676-816-5198,Senior Director,Engineering,Pinterest,Senior Management,EMP01065,Active
+Nancy Phillips,nancy.phillips2783@work.com,+86 310-692-1420,Business Developer,Sales,Verizon,Technical,EMP01066,Active
+Christina Collins,christina.collins1345@yahoo.com,+1-888 907-950-4978,HR Manager,Business Development,Warner Bros,Middle Management,EMP01067,Active
+Cynthia Rogers,cynthia.rogers9372@gmail.com,+1 555-645-8018,Network Engineer,Design,Qualcomm,Technical,EMP01068,Active
+David Allen,david.allen6982@work.com,+61 308-543-6934,HR Specialist,Customer Success,Walmart,Human Resources,EMP01069,Inactive
+Aaron Martinez,aaron.martinez4525@mail.com,+1-888 751-893-8921,Quality Assurance Manager,Operations,Paramount,Middle Management,EMP01070,Inactive
+Brenda Peterson,brenda.peterson4122@outlook.com,+44 485-561-4995,Technical Support Specialist,Infrastructure,Toyota,Customer Support,EMP01071,Inactive
+Benjamin Campbell,benjamin.campbell8198@gmail.com,+81 386-599-4475,Recruiter,Business Development,Volkswagen,Human Resources,EMP01072,Active
+Kimberly Perez,kimberly.perez9206@outlook.com,+1 729-295-2402,Business Analyst,Design,Disney,Analysis,EMP01073,Active
+Jose Clark,jose.clark7900@yahoo.com,+61 658-911-1282,Content Writer,Security,AT&T,Operations,EMP01074,Active
+Carol Anderson,carol.anderson9628@email.com,+81 684-666-9698,Finance Manager,Compliance,BMW,Middle Management,EMP01075,Active
+Gary Morales,gary.morales7534@email.com,+86 513-357-4777,DevOps Engineer,Customer Success,Shell,Technical,EMP01076,Active
+Jose Gonzalez,jose.gonzalez3133@mail.com,+49 421-856-8933,Product Manager,Sales,Comcast,Middle Management,EMP01077,Active
+Jose Peterson,jose.peterson1747@outlook.com,+49 503-332-6912,Consultant,Data Science,Uber,Consulting,EMP01078,Active
+Kevin Smith,kevin.smith845@outlook.com,+1 766-399-3068,Support Engineer,Security,Goldman Sachs,Technical,EMP01079,Inactive
+Susan Bell,susan.bell7943@company.com,+61 548-288-1841,Chief Executive Officer,Infrastructure,Mercedes-Benz,Executive Leadership,EMP01080,Active
+Diane Davis,diane.davis1313@company.com,+1-888 844-802-1878,Administrator,Marketing,TotalEnergies,Operations,EMP01081,Active
+Karen Morgan,karen.morgan2040@yahoo.com,+1-800 982-526-4697,Database Administrator,Quality Assurance,Meta,Analysis,EMP01082,On Leave
+Anthony Lewis,anthony.lewis7125@mail.com,+86 782-735-1986,Account Executive,Quality Assurance,TSMC,Sales,EMP01083,On Leave
+Adam Miller,adam.miller4435@yahoo.com,+44 360-345-3847,Consultant,Legal,Twitter,Consulting,EMP01084,On Leave
+Barbara Hernandez,barbara.hernandez9829@email.com,+61 498-133-4792,Chief Executive Officer,Strategic Planning,Nestlé,Executive Leadership,EMP01085,Active
+Aaron Jackson,aaron.jackson3924@email.com,+86 840-703-4241,Customer Success Manager,Product,Apple,Middle Management,EMP01086,Inactive
+Thomas Wright,thomas.wright2430@outlook.com,+44 261-269-6039,Software Developer,Human Resources,Lockheed Martin,Technical,EMP01087,On Leave
+Jean Peterson,jean.peterson7779@gmail.com,+86 916-512-5460,Database Administrator,Quality Assurance,Nestlé,Analysis,EMP01088,On Leave
+Olivia Young,olivia.young7178@gmail.com,+81 818-356-1423,Account Executive,Marketing,Uber,Sales,EMP01089,Active
+Sandra Collins,sandra.collins4515@gmail.com,+1-888 241-881-3870,Assistant,Infrastructure,Booking.com,Operations,EMP01090,Inactive
+Justin Evans,justin.evans7241@mail.com,+61 293-581-6700,Account Executive,Research & Development,Cisco,Sales,EMP01091,Inactive
+George Lee,george.lee5503@yahoo.com,+91 910-607-5722,Recruiter,Sales,AMD,Human Resources,EMP01092,Inactive
+Abigail Scott,abigail.scott4235@outlook.com,+81 318-891-7622,Chief Financial Officer,Product,Meta,Executive Leadership,EMP01093,On Leave
+James Edwards,james.edwards3173@gmail.com,+1-800 570-737-9167,Software Architect,Product,Johnson & Johnson,Technical,EMP01094,Inactive
+Abigail Brown,abigail.brown4819@yahoo.com,+61 915-596-2989,Senior Developer,Research & Development,Sony,Technical,EMP01095,Active
+Alexander Phillips,alexander.phillips5191@yahoo.com,+1-800 214-665-7684,Coordinator,Compliance,Warner Bros,Operations,EMP01096,Active
+Steven Cooper,steven.cooper2622@email.com,+61 933-398-9337,Vice President,Product,JPMorgan Chase,Executive Leadership,EMP01097,Active
+Sharon Cooper,sharon.cooper9131@company.com,+33 592-295-9327,Marketing Specialist,Engineering,Salesforce,Marketing,EMP01098,Active
+David Moore,david.moore8418@work.com,+86 202-389-5891,Strategist,Strategic Planning,Volkswagen,Operations,EMP01099,On Leave
+Samuel Edwards,samuel.edwards8035@mail.com,+81 540-665-9903,Content Writer,Human Resources,Nestlé,Operations,EMP01100,Inactive
+Eric Ortiz,eric.ortiz9468@yahoo.com,+91 439-976-7730,Product Manager,Legal,Disney,Middle Management,EMP01101,Active
+Brian Morales,brian.morales2592@email.com,+61 237-229-9229,Marketing Specialist,Business Development,BP,Marketing,EMP01102,On Leave
+George Bell,george.bell7586@mail.com,+1 939-247-7717,President,Product,Tesla,Executive Leadership,EMP01103,Active
+Barbara Walker,barbara.walker6612@mail.com,+44 536-972-9742,Analyst,Research & Development,Volkswagen,Analysis,EMP01104,Inactive
+Brian Parker,brian.parker688@mail.com,+1-888 270-340-5708,Support Engineer,Engineering,TSMC,Technical,EMP01105,Active
+Jean Garcia,jean.garcia1746@email.com,+61 370-810-5906,Quality Assurance Manager,Sales,AT&T,Middle Management,EMP01106,Active
+Jennifer Lee,jennifer.lee6241@outlook.com,+91 349-350-9702,Analyst,Finance,Mercedes-Benz,Analysis,EMP01107,Inactive
+Benjamin Collins,benjamin.collins1393@yahoo.com,+1-888 591-734-4945,Analyst,Operations,Oracle,Analysis,EMP01108,Inactive
+Samuel Martinez,samuel.martinez7629@outlook.com,+86 882-109-8622,Software Developer,Product,Twitter,Technical,EMP01109,Active
+Jerry Wright,jerry.wright9726@outlook.com,+86 854-534-5097,Senior Manager,Marketing,Nestlé,Middle Management,EMP01110,Inactive
+Kevin Gonzalez,kevin.gonzalez6348@yahoo.com,+1-888 567-688-5847,HR Manager,Engineering,Tesla,Middle Management,EMP01111,Active
+Robert Cooper,robert.cooper9372@gmail.com,+1 820-863-9138,Recruiter,Business Development,Toyota,Human Resources,EMP01112,Active
+Alice Morgan,alice.morgan3688@outlook.com,+49 835-356-3240,Software Developer,Design,Qualcomm,Technical,EMP01113,Active
+Alexander Evans,alexander.evans646@company.com,+1-888 573-849-3153,Chief Financial Officer,Quality Assurance,T-Mobile,Executive Leadership,EMP01114,Active
+Carol Lee,carol.lee2265@yahoo.com,+1-800 574-643-9221,Legal Advisor,Strategic Planning,Cisco,Consulting,EMP01115,Active
+Nancy Taylor,nancy.taylor5649@outlook.com,+44 679-177-3306,Administrator,Engineering,Qualcomm,Operations,EMP01116,Active
+Jerry Morris,jerry.morris9231@work.com,+81 292-909-7464,Training Specialist,Business Development,AMD,Operations,EMP01117,Active
+Kimberly Wright,kimberly.wright4395@email.com,+1-888 590-942-7086,Vice President,Product,ExxonMobil,Executive Leadership,EMP01118,Active
+Jerry Anderson,jerry.anderson5474@mail.com,+1-888 426-763-2035,Marketing Specialist,Technology,Lyft,Marketing,EMP01119,Inactive
+Cynthia Martin,cynthia.martin842@yahoo.com,+1 511-604-2902,HR Specialist,Strategic Planning,JPMorgan Chase,Human Resources,EMP01120,Active
+Paul Gomez,paul.gomez6178@company.com,+1-800 629-701-3531,Software Architect,Human Resources,BP,Technical,EMP01121,Inactive
+Megan Miller,megan.miller4683@company.com,+1 906-479-4559,Assistant,Engineering,Lyft,Operations,EMP01122,Inactive
+Nicholas Thomas,nicholas.thomas9020@outlook.com,+81 262-507-5520,Marketing Manager,Sales,Netflix,Middle Management,EMP01123,Active
+Jessica Reed,jessica.reed3575@email.com,+1-888 221-151-6464,Administrator,Product,Meta,Operations,EMP01124,Active
+Charles Cook,charles.cook9180@work.com,+49 800-321-4817,Database Administrator,Legal,Apple,Analysis,EMP01125,Active
+Alice Martinez,alice.martinez2470@outlook.com,+33 753-356-3858,Analyst,Design,Walmart,Analysis,EMP01126,Active
+Dennis Bell,dennis.bell3998@outlook.com,+1-888 531-116-3854,Chief Technology Officer,Human Resources,Walmart,Executive Leadership,EMP01127,Active
+William Rodriguez,william.rodriguez1141@gmail.com,+61 659-896-6931,Legal Advisor,Strategic Planning,JD.com,Consulting,EMP01128,On Leave
+Lauren Miller,lauren.miller810@mail.com,+1-800 508-569-1510,Account Executive,Data Science,Adobe,Sales,EMP01129,Active
+Diane Reed,diane.reed8132@gmail.com,+61 275-182-6277,Finance Manager,Strategic Planning,Netflix,Middle Management,EMP01130,On Leave
+Christopher Jones,christopher.jones9690@email.com,+1-800 929-432-7240,Senior Director,Research & Development,Lyft,Senior Management,EMP01131,On Leave
+Victoria Jackson,victoria.jackson1724@company.com,+44 870-766-4522,Sales Representative,Data Science,Uber,Sales,EMP01132,Inactive
+Cheryl Gomez,cheryl.gomez7530@work.com,+91 625-847-2557,Software Developer,Strategic Planning,Volkswagen,Technical,EMP01133,Active
+Gary Lee,gary.lee7870@yahoo.com,+44 293-951-2398,Recruiter,Research & Development,ExxonMobil,Human Resources,EMP01134,Active
+Brenda Miller,brenda.miller9215@yahoo.com,+1 800-675-6400,Legal Advisor,Support,Qualcomm,Consulting,EMP01135,Active
+Ryan Thompson,ryan.thompson942@email.com,+86 814-419-6761,Recruiter,Strategic Planning,TSMC,Human Resources,EMP01136,Active
+Christina Allen,christina.allen3774@company.com,+44 558-965-7022,Senior Developer,Human Resources,Pinterest,Technical,EMP01137,Active
+Abigail Moore,abigail.moore9290@company.com,+1-888 828-791-1430,Database Administrator,Compliance,Qualcomm,Analysis,EMP01138,On Leave
+Dennis Cooper,dennis.cooper4577@yahoo.com,+86 547-459-1100,Customer Success Manager,Research & Development,Amazon,Middle Management,EMP01139,Active
+Christopher Torres,christopher.torres602@yahoo.com,+44 964-643-4524,Recruiter,Business Development,Apple,Human Resources,EMP01140,Inactive
+Sharon Robinson,sharon.robinson5414@outlook.com,+1-888 810-186-1861,Project Manager,Operations,ExxonMobil,Middle Management,EMP01141,Active
+Daniel Murphy,daniel.murphy4558@gmail.com,+61 877-534-8957,Financial Analyst,Finance,Netflix,Analysis,EMP01142,On Leave
+Nicholas Clark,nicholas.clark1964@mail.com,+81 640-213-5640,Business Analyst,Legal,AT&T,Analysis,EMP01143,On Leave
+Stephen King,stephen.king6575@yahoo.com,+1-888 256-107-4349,Recruiter,Quality Assurance,Microsoft,Human Resources,EMP01144,Active
+Margaret Rogers,margaret.rogers2065@outlook.com,+1 709-864-8055,Senior Director,Research & Development,Mercedes-Benz,Senior Management,EMP01145,Active
+Charles Harris,charles.harris5902@mail.com,+44 606-982-1693,Software Architect,Compliance,Alibaba,Technical,EMP01146,Inactive
+Robert Robinson,robert.robinson9494@company.com,+91 926-755-7843,Chief Marketing Officer,Customer Success,Airbnb,Executive Leadership,EMP01147,Active
+Thomas Sanchez,thomas.sanchez7638@work.com,+81 290-547-2734,Chief Technology Officer,Customer Success,Oracle,Executive Leadership,EMP01148,Active
+Brenda Peterson,brenda.peterson5183@company.com,+81 426-441-3754,Finance Manager,Data Science,Meta,Middle Management,EMP01149,Active
+Joyce Parker,joyce.parker5824@yahoo.com,+81 944-938-3419,Vice President,Data Science,Alibaba,Executive Leadership,EMP01150,Active

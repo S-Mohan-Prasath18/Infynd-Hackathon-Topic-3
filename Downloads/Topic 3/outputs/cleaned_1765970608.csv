@@ -1,0 +1,11 @@
+company_name,person_name,email,job_title,country,website,issues,has_issues,suggested_email,suggested_country,email_confidence,country_confidence,corrections_applied,is_duplicate,duplicate_group,role_function,role_confidence
+TechFlow,John Doe,john.doe@techflo.io,Sales Manager,USA,techflow.io,,False,john.doe@techflo.io,United States,0.0,1.0,Country Standardization;Role Function Mapping,False,email_match_3.0,Sales,0.95
+TechFlow Inc,Johnathan Doe,john.doe@techflo.io,Sales Mgr,US,techflow.io,,False,john.doe@techflo.io,United States,0.0,1.0,Country Standardization;Role Function Mapping,True,email_match_3.0,Sales,0.95
+Acme Corp,,invalid.email,CEO,,acme.com,missing_person_name;invalid_email_format;missing_country,True,invalid.email,,0.0,0.0,,False,,Other,0.0
+Global Syndicates,Jane Smith,jane@gnail.com,Director of Marketing,UK,global.com,,False,jane@gnail.com,United Kingdom,0.0,1.0,Country Standardization;Role Function Mapping,False,email_match_2.0,Marketing,0.95
+Global Syndicates,Jane Smith,jane@gnail.com,Marketing Dir,,global.com,missing_country,True,jane@gnail.com,,0.0,0.0,Role Function Mapping,True,email_match_2.0,Marketing,0.95
+Stark Ind,Tony Stark,tony@stark.com,Iron Man,USA,stark.com,,False,tony@stark.com,United States,0.0,1.0,Country Standardization,False,,Other,0.0
+Wayne Ent,Bruce Wayne,bruce@wayne.com,Chairman,,wayne.com,missing_country,True,bruce@wayne.com,,0.0,0.0,,False,,Other,0.0
+Cyberdyne,,terminator@skynet.net,Security,,skynet.net,missing_person_name;missing_country,True,terminator@skynet.net,,0.0,0.0,,False,,Other,0.0
+Umbrella Corp,Alice,,Security,Raccoon City,umbrella.com,missing_email,True,,Raccoon City,0.0,0.0,,False,,Other,0.0
+Massive Dynamic,Walter Bishop,walter@massive.com,Scientist,USA,massivedynamic.com,,False,walter@massive.com,United States,0.0,1.0,Country Standardization,False,,Other,0.0

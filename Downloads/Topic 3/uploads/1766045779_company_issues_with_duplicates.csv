@@ -1,0 +1,37 @@
+id,company_name,address_1,address_2,address_3,post_code,post_town,county,country,region,head_office_country,domain,phone,location_type,company_email,founded_date,company_age,sub_industry
+1,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+2,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+3,ABC Technologies,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,Branch,contact@abctech.com,2015-06-01,10,IT Services
+4,XYZ Solutions,45 Anna Nagar,,,600028,Chennai,TN,India,South,India,xyz.com,9123456780,HQ,hello@xyz.com,2012-03-15,13,Consulting
+5,XYZ Solutions,45 Anna Nagar,,,600028,Chennai,TN,India,South,India,xyz.com,9123456780,HQ,hello@xyz.com,2012-03-15,13,Consulting
+6,XYZ Solns,45 Anna Nagar,,,600028,Chennai,TN,India,South,India,xyz.com,9123456780,Branch,support@xyz.com,2012-03-15,13,Consulting
+7,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+8,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+9,ABC Technologies,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,Branch,contact@abctech.com,2015-06-01,10,IT Services
+10,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+11,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+12,ABC Technologies,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,Branch,contact@abctech.com,2015-06-01,10,IT Services
+13,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+14,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+15,ABC Technologies,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,Branch,contact@abctech.com,2015-06-01,10,IT Services
+16,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+17,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+18,ABC Technologies,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,Branch,contact@abctech.com,2015-06-01,10,IT Services
+19,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+20,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+21,ABC Technologies,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,Branch,contact@abctech.com,2015-06-01,10,IT Services
+22,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+23,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+24,ABC Technologies,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,Branch,contact@abctech.com,2015-06-01,10,IT Services
+25,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+26,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+27,ABC Technologies,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,Branch,contact@abctech.com,2015-06-01,10,IT Services
+28,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+29,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+30,ABC Technologies,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,Branch,contact@abctech.com,2015-06-01,10,IT Services
+31,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+32,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+33,ABC Technologies,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,Branch,contact@abctech.com,2015-06-01,10,IT Services
+34,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+35,ABC Tech,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,HQ,info@abctech.com,2015-06-01,10,IT Services
+36,ABC Technologies,12 MG Road,Suite 101,,641001,Coimbatore,TN,India,South,India,abctech.com,9876543210,Branch,contact@abctech.com,2015-06-01,10,IT Services

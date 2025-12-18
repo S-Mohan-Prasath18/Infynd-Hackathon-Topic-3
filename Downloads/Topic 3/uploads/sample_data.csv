@@ -1,0 +1,11 @@
+company_name,person_name,email,job_title,country,website
+TechFlow,John Doe,john.doe@techflo.io,Sales Manager,USA,techflow.io
+TechFlow Inc,Johnathan Doe,john.doe@techflo.io,Sales Mgr,US,techflow.io
+Acme Corp,,invalid.email,CEO,,acme.com
+Global Syndicates,Jane Smith,jane@gnail.com,Director of Marketing,UK,global.com
+Global Syndicates,Jane Smith,jane@gnail.com,Marketing Dir,,global.com
+Stark Ind,Tony Stark,tony@stark.com,Iron Man,USA,stark.com
+Wayne Ent,Bruce Wayne,bruce@wayne.com,Chairman,,wayne.com
+Cyberdyne,,terminator@skynet.net,Security,,skynet.net
+Umbrella Corp,Alice,,Security,Raccoon City,umbrella.com
+Massive Dynamic,Walter Bishop,walter@massive.com,Scientist,USA,massivedynamic.com
