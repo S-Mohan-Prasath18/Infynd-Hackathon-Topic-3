@@ -839,7 +839,6 @@ function Index() {
       <Departments />
       <WhyChooseUs />
       <Portfolio />
-      <AcademicPartnersSection />
       <TestimonialsSection />
       <Blog />
       <Contact />

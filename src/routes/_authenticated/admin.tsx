@@ -152,7 +152,6 @@ function AdminPage() {
     { id: "leads", label: "Leads", icon: Mail },
     { id: "careers", label: "Careers", icon: UserCheck },
     { id: "blog", label: "Blog", icon: FileText },
-    { id: "partnerships", label: "Academic Partnerships", icon: GraduationCap },
     { id: "mou", label: "MoU Management", icon: FolderPlus },
     { id: "settings", label: "Settings", icon: Settings },
   ];
@@ -241,7 +240,6 @@ function AdminPage() {
         {activeTab === "leads" && <LeadsPanel />}
         {activeTab === "careers" && <CareersPanel />}
         {activeTab === "blog" && <BlogPanel />}
-        {activeTab === "partnerships" && <PartnershipsPanel />}
         {activeTab === "mou" && <MouManagementPanel />}
         {activeTab === "settings" && <SettingsPanel />}
       </main>
@@ -328,36 +326,7 @@ function DashboardPanel() {
         </div>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2">
-        <div className="border border-white/10 bg-surface/10 p-6 rounded-xl">
-          <h3 className="text-sm font-bold font-mono uppercase tracking-widest text-primary mb-4">
-            Recent Academic Alliances
-          </h3>
-          <div className="space-y-3">
-            {colleges.slice(0, 4).map((c) => (
-              <div
-                key={c.id}
-                className="flex items-center justify-between border-b border-white/5 pb-2 text-xs"
-              >
-                <div>
-                  <div className="font-bold">{c.college_name}</div>
-                  <div className="text-muted text-[10px]">{c.location}</div>
-                </div>
-                <span
-                  className={
-                    "px-2 py-0.5 rounded font-mono text-[8px] uppercase tracking-widest border " +
-                    (c.status === "Active"
-                      ? "bg-green-500/10 text-green-400 border-green-500/20"
-                      : "bg-red-500/10 text-red-400 border-red-500/20")
-                  }
-                >
-                  {c.status}
-                </span>
-              </div>
-            ))}
-            {colleges.length === 0 && <p className="text-xs text-muted">No alliances registered.</p>}
-          </div>
-        </div>
+      <div className="grid gap-6 md:grid-cols-1">
 
         <div className="border border-white/10 bg-surface/10 p-6 rounded-xl">
           <h3 className="text-sm font-bold font-mono uppercase tracking-widest text-primary mb-4">
@@ -977,46 +946,6 @@ function BlogPanel() {
             </div>
           ))}
         </div>
-      </div>
-    </div>
-  );
-}
-
-/* ============================================================
-   PANELS: 8. ACADEMIC PARTNERSHIPS (READ ONLY OVERVIEW)
-============================================================ */
-function PartnershipsPanel() {
-  const [colleges, setColleges] = useState<MouCollege[]>([]);
-  useEffect(() => { getMous().then(setColleges); }, []);
-
-  return (
-    <div className="space-y-6 animate-fade-in">
-      <h2 className="font-mono text-xs uppercase tracking-widest text-primary">Partnership Directory</h2>
-      <div className="grid gap-6 md:grid-cols-2">
-        {colleges.map((c) => (
-          <div key={c.id} className="border border-white/10 bg-surface/20 p-5 rounded-xl flex flex-col justify-between">
-            <div>
-              <div className="flex justify-between items-start">
-                <h3 className="font-bold text-base text-foreground leading-tight">{c.college_name}</h3>
-                <span className={`px-2 py-0.5 rounded font-mono text-[8px] border uppercase ${c.status === "Active" ? "bg-green-500/10 text-green-400 border-green-500/20" : "bg-red-500/10 text-red-400 border-red-500/20"}`}>
-                  {c.status}
-                </span>
-              </div>
-              <p className="text-xs text-muted mt-2 flex items-center gap-1"><MapPin className="size-3 text-primary" /> {c.location}</p>
-              
-              <div className="mt-4 border-t border-white/5 pt-3 grid grid-cols-2 gap-2 text-xs text-muted">
-                <div>
-                  <span className="block text-[10px] text-muted/60">Signed Date</span>
-                  <span>{c.signed_date}</span>
-                </div>
-                <div>
-                  <span className="block text-[10px] text-muted/60">Expiry Date</span>
-                  <span>{c.expiry_date}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
       </div>
     </div>
   );

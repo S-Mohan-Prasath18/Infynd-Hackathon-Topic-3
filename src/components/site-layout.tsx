@@ -10,7 +10,6 @@ const NAV = [
   { to: "/services", label: "Services" },
   { to: "/portfolio", label: "Portfolio" },
   { to: "/mou", label: "MOU" },
-  { to: "/academic-partnerships", label: "Partnerships" },
   { to: "/internships", label: "Internships" },
   { to: "/blog", label: "Blog" },
   { to: "/careers", label: "Careers" },
