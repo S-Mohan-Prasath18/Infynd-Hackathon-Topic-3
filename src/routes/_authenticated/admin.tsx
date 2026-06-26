@@ -152,7 +152,6 @@ function AdminPage() {
     { id: "leads", label: "Leads", icon: Mail },
     { id: "careers", label: "Careers", icon: UserCheck },
     { id: "blog", label: "Blog", icon: FileText },
-    { id: "mou", label: "MoU Management", icon: FolderPlus },
     { id: "settings", label: "Settings", icon: Settings },
   ];
 
@@ -240,7 +239,6 @@ function AdminPage() {
         {activeTab === "leads" && <LeadsPanel />}
         {activeTab === "careers" && <CareersPanel />}
         {activeTab === "blog" && <BlogPanel />}
-        {activeTab === "mou" && <MouManagementPanel />}
         {activeTab === "settings" && <SettingsPanel />}
       </main>
     </div>
@@ -251,69 +249,17 @@ function AdminPage() {
    PANELS: 1. DASHBOARD
 ============================================================ */
 function DashboardPanel() {
-  const [colleges, setColleges] = useState<MouCollege[]>([]);
   const [leadsCount, setLeadsCount] = useState(0);
   const [careersCount, setCareersCount] = useState(0);
 
   useEffect(() => {
-    getMous().then(setColleges);
     getLeads().then((l) => setLeadsCount(l.length));
     getApplications().then((a) => setCareersCount(a.length));
   }, []);
 
-  const activeMous = colleges.filter((c) => c.status === "Active");
-  const expiredMous = colleges.filter((c) => c.status === "Expired");
-
-  // Determine renewals expiring within 6 months
-  const upcomingRenewals = activeMous.filter((c) => {
-    try {
-      const expDate = new Date(c.expiry_date);
-      const diffTime = expDate.getTime() - new Date().getTime();
-      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-      return diffDays > 0 && diffDays <= 180;
-    } catch {
-      return false;
-    }
-  });
-
-  // Collect training programs count
-  const totalTrainings = activeMous.reduce(
-    (acc, val) => acc + (val.training_programs?.length || 0),
-    0
-  );
-
   return (
     <div className="space-y-8 animate-fade-in">
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="border border-white/10 bg-surface/20 p-6 rounded-xl relative overflow-hidden">
-          <div className="absolute top-2 right-2 text-primary/10">
-            <CheckCircle className="size-12" />
-          </div>
-          <div className="text-3xl font-bold text-primary">{activeMous.length}</div>
-          <div className="mt-2 font-mono text-[9px] uppercase tracking-widest text-muted">
-            Active MoUs
-          </div>
-        </div>
-
-        <div className="border border-white/10 bg-surface/20 p-6 rounded-xl relative overflow-hidden">
-          <div className="absolute top-2 right-2 text-amber-500/10">
-            <Calendar className="size-12" />
-          </div>
-          <div className="text-3xl font-bold text-amber-400">{upcomingRenewals.length}</div>
-          <div className="mt-2 font-mono text-[9px] uppercase tracking-widest text-muted">
-            Upcoming Renewals
-          </div>
-        </div>
-
-        <div className="border border-white/10 bg-surface/20 p-6 rounded-xl relative overflow-hidden">
-          <div className="absolute top-2 right-2 text-primary/10">
-            <Wrench className="size-12" />
-          </div>
-          <div className="text-3xl font-bold text-primary">{totalTrainings}</div>
-          <div className="mt-2 font-mono text-[9px] uppercase tracking-widest text-muted">
-            Training Programs
-          </div>
-        </div>
 
         <div className="border border-white/10 bg-surface/20 p-6 rounded-xl relative overflow-hidden">
           <div className="absolute top-2 right-2 text-primary/10">
