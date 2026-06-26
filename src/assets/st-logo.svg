@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" width="260" height="80">
+  <!-- Monogram T/S -->
+  <g transform="translate(15, 0)">
+    <!-- T (White Serif) -->
+    <text x="25" y="62" font-family="Georgia, serif" font-size="72" font-weight="normal" fill="#FFFFFF" text-anchor="middle">T</text>
+    <!-- S (Gold Serif, positioned to overlay nicely) -->
+    <text x="24" y="65" font-family="Georgia, serif" font-size="62" font-weight="normal" fill="#D4AF37" text-anchor="middle">S</text>
+  </g>
+  
+  <!-- Branding Text -->
+  <g transform="translate(70, 0)">
+    <!-- SOFTWARE -->
+    <text x="5" y="41" font-family="Georgia, serif" font-size="24" font-weight="bold" letter-spacing="2" fill="#FFFFFF">SOFTWARE</text>
+    <!-- ® Symbol -->
+    <text x="172" y="28" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#FFFFFF">®</text>
+    <!-- SOLUTION -->
+    <text x="5" y="66" font-family="Georgia, serif" font-size="24" font-weight="bold" letter-spacing="3" fill="#D4AF37">SOLUTION</text>
+  </g>
+</svg>
